@@ -4,7 +4,7 @@
 <a href="https://twitter.com/JaysonSanBuena1" target="_blank"><img src="https://img.shields.io/badge/Twitter-%231877F2.svg?&style=flat-square&logo=twitter&logoColor=white" alt="Twitter"></a> &nbsp; 
 <a href="https://www.facebook.com/mkdirlove.git" target="_blank"><img src="https://img.shields.io/badge/Facebook-%231877F2.svg?&style=flat-square&logo=facebook&logoColor=white" alt="Facebook"></a>  <br>
 
-![Hack](https://media.giphy.com/media/FnGJfc18tDDHy/source.gif)
+![Hack](https://github.com/mkdirlove/mkdirlove.github.io/blob/master/assets/images/Peek%202020-07-23%2000-16.gif)
 
 <div align="center" width="50">
 
@@ -20,7 +20,7 @@ Please feel free to clone projects, raise issues and submit PRs if you think som
 Ask me anything <a href="https://github.com/mkdirlove/mkdirlove/issues/new"><b>here</b></a><br>
 or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 
-<i>Happy Coding!</i> 😊
+<i>Happy Hacking X Coding!</i> 😊
 
 </div>
 
@@ -36,4 +36,4 @@ I am a 2nd year BSIT student who loves building things that will destroy other t
 
 #
 
-    ⭐ From [Jayson Cabrillas San Buenaventura](https://github.com/mkdirlove)
+⭐ From [Jayson Cabrillas San Buenaventura](https://github.com/mkdirlove)
