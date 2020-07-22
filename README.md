@@ -29,7 +29,7 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 ![Hack](https://avatars0.githubusercontent.com/u/52001009?s=460&u=1292c6a3f7ac594f6e8c8414f433692779be9285&v=4)
 
 </div>
-# 🤔 About me:
+# ABOUT ME🤔:
 
 - 🐇 Following the white rabbit
 - 🐈 Cat dad 😻
