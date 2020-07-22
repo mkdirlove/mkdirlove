@@ -26,14 +26,6 @@ or <a href="mailto:dheeraj12000@gmail.com"><b>email</b></a> me
 
 <div align="center">
 
-
-
-</div>
-
-
-
-
-
 ![Hack](https://avatars0.githubusercontent.com/u/52001009?s=460&u=1292c6a3f7ac594f6e8c8414f433692779be9285&v=4)
 
 # 🤔 About me:
@@ -47,5 +39,6 @@ or <a href="mailto:dheeraj12000@gmail.com"><b>email</b></a> me
 - 🚀 One day I will see humans on Mars!
 - 🐇🥚 There's easter eggs in this profile... 
 
+</div>
 
 ⭐ From [Jayson Cabrillas San Buenaventura](https://github.com/mkdirlove)
