@@ -30,10 +30,11 @@ or <a href="mailto:dheeraj12000@gmail.com"><b>email</b></a> me
 
 </div>
 
-⭐ From [Jayson Cabrillas San Buenaventura](https://github.com/mkdirlove)
 
 
-# 👀 Hi stranger! 👋🏻 -->
+
+
+![Hack](https://avatars0.githubusercontent.com/u/52001009?s=460&u=1292c6a3f7ac594f6e8c8414f433692779be9285&v=4)
 
 # 🤔 About me:
 
@@ -44,14 +45,7 @@ or <a href="mailto:dheeraj12000@gmail.com"><b>email</b></a> me
 - 💊 Coding the Matrix
 - 😍 Emoji lover
 - 🚀 One day I will see humans on Mars!
-- 🐇🥚 There's easter eggs in this profile... -->
+- 🐇🥚 There's easter eggs in this profile... 
 
 
-<!--
-  <a target="_blank" href="https://www.linkedin.com/in/absphreak/">🇱​🇮​🇳​🇰​🇪​🇩​🇮​🇳​</a> ●
-  <a target="_blank" href="https://www.instagram.com/high__on._.life/">🇮​🇳​🇸​🇹​🇦​🇬​🇷​🇦​🇲​</a> ●
-  <a target="_blank" href="https://www.facebook.com/dheerubhai2000/">🇫​🇦​🇨​🇪​🇧​🇴​🇴​🇰​</a> ●  -->
-
-<!--[![](https://img.shields.io/badge/LinkedIn-dheeraj-2000-blue)](https://www.linkedin.com/in/dheeraj-2000/)-->
-<!-- Watch this: https://www.youtube.com/watch?v=eC7xzavzEKY -->
-
+⭐ From [Jayson Cabrillas San Buenaventura](https://github.com/mkdirlove)
