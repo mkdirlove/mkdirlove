@@ -4,7 +4,7 @@
 <a href="https://twitter.com/JaysonSanBuena1" target="_blank"><img src="https://img.shields.io/badge/Twitter-%231877F2.svg?&style=flat-square&logo=twitter&logoColor=white" alt="Twitter"></a> &nbsp; 
 <a href="https://www.facebook.com/mkdirlove.git" target="_blank"><img src="https://img.shields.io/badge/Facebook-%231877F2.svg?&style=flat-square&logo=facebook&logoColor=white" alt="Facebook"></a>  <br>
 
-![Hack](https://github.com/mkdirlove/mkdirlove.github.io/blob/master/assets/images/4NAq.gif)
+![Hack]()
 
 <div align="center" width="50">
 
@@ -25,15 +25,6 @@ or <a href="mailto:dheeraj12000@gmail.com"><b>email</b></a> me
 </div>
 
 <div align="center">
-
-<img align="center" src="https://github-readme-stats.vercel.app/api?username=dheeraj-2000&&show_icons=true&title_color=ffc857&icon_color=8ac926&text_color=daf7dc&bg_color=151515" alt="Dheeraj(@dheeraj-2000)'s Github Stats">
-
-
----
-[![HitCount](http://hits.dwyl.com/dheeraj-2000/dheeraj-2000.svg)](http://hits.dwyl.com/dheeraj-2000/dheeraj-2000)
-![visitors](https://visitor-badge.glitch.me/badge?page_id=dheeraj-2000.dheeraj-2000) 
-
-
 
 
 
