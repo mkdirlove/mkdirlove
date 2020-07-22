@@ -39,12 +39,12 @@ or <a href="mailto:dheeraj12000@gmail.com"><b>email</b></a> me
 
 </div>
 
-⭐ From [Dheeraj Chaudhary](https://github.com/dheeraj-2000)
+⭐ From [Jayson Cabrillas San Buenaventura](https://github.com/mkdirlove)
 
 
-<!-- # 👀 Hi stranger! 👋🏻 -->
+# 👀 Hi stranger! 👋🏻 -->
 
-<!-- # 🤔 About me:
+# 🤔 About me:
 
 - 🐇 Following the white rabbit
 - 🐈 Cat dad 😻
@@ -64,4 +64,3 @@ or <a href="mailto:dheeraj12000@gmail.com"><b>email</b></a> me
 <!--[![](https://img.shields.io/badge/LinkedIn-dheeraj-2000-blue)](https://www.linkedin.com/in/dheeraj-2000/)-->
 <!-- Watch this: https://www.youtube.com/watch?v=eC7xzavzEKY -->
 
----
