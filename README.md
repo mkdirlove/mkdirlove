@@ -1,18 +1,15 @@
 ## HAPPY HACKING 😎😎😎
 <div align="center">
+  
+<a href="https://twitter.com/JaysonSanBuena1" target="_blank"><img src="https://img.shields.io/badge/Twitter-%231877F2.svg?&style=flat-square&logo=twitter&logoColor=white" alt="Twitter"></a> &nbsp; 
+<a href="https://www.facebook.com/mkdirlove.git" target="_blank"><img src="https://img.shields.io/badge/Facebook-%231877F2.svg?&style=flat-square&logo=facebook&logoColor=white" alt="Facebook"></a>  <br>
 
-<a href="https://www.facebook.com/mkdirlove.git" target="_blank"><img src="https://img.shields.io/badge/Facebook-%231877F2.svg?&style=flat-square&logo=facebook&logoColor=white" alt="Facebook"></a>&nbsp;   
-
-<a href="https://twitter.com/JaysonSanBuena1" target="_blank"><img src="https://img.shields.io/badge/Twitter-%231877F2.svg?&style=flat-square&logo=twitter&logoColor=white" alt="Twitter"></a> <br>
-
-
-![Matrix SVG](https://avatars0.githubusercontent.com/u/52001009?s=460&u=1292c6a3f7ac594f6e8c8414f433692779be9285&v=4)
+![Profile](https://avatars0.githubusercontent.com/u/52001009?s=460&u=1292c6a3f7ac594f6e8c8414f433692779be9285&v=4)
 
 <div align="center" width="50">
 
 
 </div>
-
 
 
 
