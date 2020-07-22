@@ -33,6 +33,10 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 
 I am a 2nd year BSIT student who loves building things that will destroy other things. Don't mind me cause i'm just nothing.
 </div>
+<br />
+<div style="padding-top:41.667%;position:relative;"><iframe src="https://gifer.com/embed/7Zvv" width="100%" height="100%" style='position:absolute;top:0;left:0;' frameBorder="0" allowFullScreen></iframe></div><p><a href="https://gifer.com">via GIFER</a></p>
+<div style="padding-top:41.667%;position:relative;"><iframe src="https://gifer.com/embed/7Zvv" width="100%" height="100%" style='position:absolute;top:0;left:0;' frameBorder="0" allowFullScreen></iframe></div><p><a href="https://gifer.com">via GIFER</a></p>
 
-
+<br />
+<br />
 ⭐ From [Jayson Cabrillas San Buenaventura](https://github.com/mkdirlove)
