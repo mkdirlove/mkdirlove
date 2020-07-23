@@ -36,4 +36,4 @@ I am a 2nd year BSIT student who loves building things that will destroy other t
 
 #
 
-⭐ From [Jayson Cabrillas San Buenaventura](https://github.com/mkdirlove)
+⭐ From [Jayson Cabrillas San Buenaventura](http://mkdirlove.github.io/)
