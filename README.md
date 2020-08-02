@@ -1,5 +1,4 @@
-## ┌─[root@parrot]─[~]
-## └──╼ # ./mkdirlove.sh
+## 𝙄 𝙇𝙊𝙑𝙀 𝘾𝙊𝙈𝙋𝙐𝙏𝙀𝙍 𝙋𝙍𝙊𝙂𝙍𝘼𝙈𝙈𝙄𝙉𝙂 𝘼𝙉𝘿 𝙋𝙀𝙉𝙀𝙏𝙍𝘼𝙏𝙄𝙊𝙉 𝙏𝙀𝙎𝙏𝙄𝙉𝙂💻💻💻
 <div align="center">
   
 <a href="https://twitter.com/JaysonSanBuena1" target="_blank"><img src="https://img.shields.io/badge/Twitter-%231877F2.svg?&style=flat-square&logo=twitter&logoColor=white" alt="Twitter"></a> &nbsp; 
