@@ -29,8 +29,7 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 𝙃𝙀𝙇𝙇𝙊 𝙒𝙊𝙍𝙇𝘿!, 𝙄'𝙈 𝙅𝘼𝙔𝙎𝙊𝙉 𝘾𝘼𝘽𝙍𝙄𝙇𝙇𝘼𝙎 𝙎𝘼𝙉 𝘽𝙐𝙀𝙉𝘼𝙑𝙀𝙉𝙏𝙐𝙍𝘼
 
 <i>I am a 2nd year BSIT student who loves building things that will destroy other things. Don't mind me cause i'm just nothing.</i> 😊
-<i>Happy Hacking X Coding!</i> 😊
-<i> </i>
+
 [![mkdirlove's GitHub Stats](https://github-readme-stats.vercel.app/api?username=mkdirlove&show_icons=true&&them=&hide_title=false)](https://github.com/mkdirlove)
 </div>
 
