@@ -34,5 +34,5 @@ I am a 2nd year BSIT student who loves building things that will destroy other t
 </div>
 
 #
-
+[![mkdirlove's GitHub Stats](https://github-readme-stats.vercel.app/api?username=mkdirlove&show_icons=true&&them=&hide_title=false)](https://github.com/mkdirlove)
 ⭐ From [Jayson Cabrillas San Buenaventura](http://mkdirlove.github.io/)
