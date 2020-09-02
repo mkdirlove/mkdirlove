@@ -32,7 +32,7 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 TENOLOGIES
 
 ![Python](https://img.shields.io/badge/-Python-black?style=flat-square&logo=Python)
-![Java](https://img.shields.io/badge/-java-E34A86?style=flat-square&logo=Java)
+![Bash](https://img.shields.io/badge/-Bash-E34A86?style=flat-square&logo=Bash)
 ![Git](https://img.shields.io/badge/-Git-black?style=flat-square&logo=Git)
 ![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=GitHub)
 
