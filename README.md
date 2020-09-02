@@ -22,30 +22,14 @@ Ask me anything <a href="https://github.com/mkdirlove/mkdirlove/issues/new"><b>h
 or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 
 </div>
-
-<div align="center">
-
-<!--[![mkdirlove's GitHub Stats](https://github-readme-stats.vercel.app/api?username=mkdirlove&show_icons=true&&them=&hide_title=false)](https://github.com/mkdirlove)-->
-![mkdirlove's Github Stats](https://github-readme-stats.vercel.app/api?username=mkdirlove&show_icons=true&theme=radical)
-## ⚡ TECHNOLOGIES
-
-![Python](https://img.shields.io/badge/-Python-black?style=flat-square&logo=Python)
-![Java](https://img.shields.io/badge/-java-E34A86?style=flat-square&logo=Java)
-![Git](https://img.shields.io/badge/-Git-black?style=flat-square&logo=Git)
-![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=GitHub)
-
-
-![VISITOR BADGE](https://visitor-badge.laobi.icu/badge?page_id=mkdirlove)
-</div>
-
 <div align="center">
 
 <details>
-<summary>Click for GitHub Stats</summary>
+<summary>CLICK TO SHOW GITHUB STATS</summary>
 <p align="center">
     <img alt = "GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=mkdirlove&show_icons=true&theme=radical">
     <br>
-  # ⚡ TECHNOLOGIES
+TENOLOGIES
 
 ![Python](https://img.shields.io/badge/-Python-black?style=flat-square&logo=Python)
 ![Java](https://img.shields.io/badge/-java-E34A86?style=flat-square&logo=Java)
