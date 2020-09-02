@@ -21,7 +21,7 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 <div align="center">
 
 <details>
-<summary>CLICK TO SHOW GITHUB STATS</summary>
+<summary>𝗖𝗟𝗜𝗖𝗞 𝗧𝗢 𝗦𝗛𝗢𝗪 𝗚𝗜𝗧𝗛𝗨𝗕 𝗦𝗧𝗔𝗧𝗦 & 𝗦𝗢𝗖𝗜𝗔𝗟</summary>
 <p align="center">
     <img alt = "GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=mkdirlove&show_icons=true&theme=radical">
     <br>
