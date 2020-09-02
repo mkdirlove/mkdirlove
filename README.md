@@ -31,7 +31,7 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 
 <!--[![mkdirlove's GitHub Stats](https://github-readme-stats.vercel.app/api?username=mkdirlove&show_icons=true&&them=&hide_title=false)](https://github.com/mkdirlove)-->
 ![mkdirlove's Github Stats](https://github-readme-stats.vercel.app/api?username=mkdirlove&show_icons=true&theme=radical)
-## ⚡ TECHNO;OGIES
+## ⚡ TECHNOLOGIES
 
 ![Python](https://img.shields.io/badge/-Python-black?style=flat-square&logo=Python)
 ![Java](https://img.shields.io/badge/-java-E34A86?style=flat-square&logo=java)
