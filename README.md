@@ -1,7 +1,5 @@
 ## 𝙄 𝙇𝙊𝙑𝙀 𝘾𝙊𝙈𝙋𝙐𝙏𝙀𝙍 𝙋𝙍𝙊𝙂𝙍𝘼𝙈𝙈𝙄𝙉𝙂 𝘼𝙉𝘿 𝙋𝙀𝙉𝙀𝙏𝙍𝘼𝙏𝙄𝙊𝙉 𝙏𝙀𝙎𝙏𝙄𝙉𝙂💻💻💻
 <div align="center">
-[![Gmail Badge](https://img.shields.io/badge/-sanbuenaventurajayson28@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:sanbuenaventurajayson28@gmail.com)](mailto:sanbuenaventurajayson28@gmail.com)
-
 <a href="https://twitter.com/JaysonSanBuena1" target="_blank"><img src="https://img.shields.io/badge/Twitter-%231877F2.svg?&style=flat-square&logo=twitter&logoColor=white" alt="Twitter"></a> &nbsp; 
 <a href="https://www.facebook.com/mkdirlove.git" target="_blank"><img src="https://img.shields.io/badge/Facebook-%231877F2.svg?&style=flat-square&logo=facebook&logoColor=white" alt="Facebook"></a>  <br>
 
