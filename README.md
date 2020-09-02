@@ -29,7 +29,7 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 
 <i>I am a 2nd year BSIT student who loves building things that will destroy other things. Don't mind me cause i'm just nothing.</i> 😊
 
-[![mkdirlove's GitHub Stats](https://github-readme-stats.vercel.app/api?username=mkdirlove&show_icons=true&&them=&hide_title=false)](https://github.com/mkdirlove)
+<!--[![mkdirlove's GitHub Stats](https://github-readme-stats.vercel.app/api?username=mkdirlove&show_icons=true&&them=&hide_title=false)](https://github.com/mkdirlove)-->
 ![mkdirlove's Github Stats](https://github-readme-stats.vercel.app/api?username=mkdirlove&show_icons=true&theme=radical)
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=mkdirlove&hide=TeX&layout=compact)
