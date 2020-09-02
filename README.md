@@ -38,4 +38,13 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 ![VISITOR BADGE](https://visitor-badge.laobi.icu/badge?page_id=mkdirlove)
 </div>
 
+<details>
+<summary>Click for GitHub Stats</summary>
+<p align="center">
+    <img alt = "GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=mkdirlove&show_icons=true&theme=radical">
+    <br>
+    <img alt = "Top Language" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mkdirlove&hide=html,&hide_border=true&title_color=5391FE&text_color=555"
+</p>
+</details> 
+
 <!--⭐ From [Jayson Cabrillas San Buenaventura](http://mkdirlove.github.io/)-->
