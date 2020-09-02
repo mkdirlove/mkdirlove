@@ -31,10 +31,11 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
     <br>
 TENOLOGIES
 
-![Python](https://img.shields.io/badge/-Python-black?style=flat-square&logo=Python)
-![Bash](https://img.shields.io/badge/-Bash-E34A86?style=flat-square&logo=Bash)
-![Git](https://img.shields.io/badge/-Git-black?style=flat-square&logo=Git)
-![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=GitHub)
+
+![BASH](https://img.shields.io/badge/-BASH-black?style=flat-square&logo=BASH)
+![PYTHON](https://img.shields.io/badge/-PYTHON-black?style=flat-square&logo=PYTHON)
+![GIT](https://img.shields.io/badge/-GIT-black?style=flat-square&logo=GIT)
+![GITHUB](https://img.shields.io/badge/-GITHUB-181717?style=flat-square&logo=GITHUB)
 
 ![VISITOR BADGE](https://visitor-badge.laobi.icu/badge?page_id=mkdirlove)
 </p>
