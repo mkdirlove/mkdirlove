@@ -4,7 +4,8 @@
 <a href="https://www.facebook.com/mkdirlove.git" target="_blank"><img src="https://img.shields.io/badge/Facebook-%231877F2.svg?&style=flat-square&logo=facebook&logoColor=white" alt="Facebook"></a>  <br>
 
 
-![Hack](https://github.com/mkdirlove/mkdirlove/blob/master/mk.gif)                                                                                                                         
+![Hack](https://github.com/mkdirlove/mkdirlove/blob/master/mk.gif)                                                                                                 ![Gmail Badge](https://img.shields.io/badge/-pseudogmaing.official@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:pseudogaming.official@gmail.com)
+                       
 
 <div align="center" width="50">                    
 
@@ -28,9 +29,9 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 ## ⚡ TECHNOLOGIES
 
 ![Python](https://img.shields.io/badge/-Python-black?style=flat-square&logo=Python)
-![Java](https://img.shields.io/badge/-java-E34A86?style=flat-square&logo=java)
-![Git](https://img.shields.io/badge/-Git-black?style=flat-square&logo=git)
-![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github)
+![Java](https://img.shields.io/badge/-java-E34A86?style=flat-square&logo=Java)
+![Git](https://img.shields.io/badge/-Git-black?style=flat-square&logo=Git)
+![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=GitHub)
 
 
 ![VISITOR BADGE](https://visitor-badge.laobi.icu/badge?page_id=mkdirlove)
