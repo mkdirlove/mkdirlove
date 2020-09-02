@@ -38,12 +38,14 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 ![VISITOR BADGE](https://visitor-badge.laobi.icu/badge?page_id=mkdirlove)
 </div>
 
+<div align="center">
+
 <details>
 <summary>Click for GitHub Stats</summary>
 <p align="center">
     <img alt = "GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=mkdirlove&show_icons=true&theme=radical">
     <br>
-   ## ⚡ TECHNOLOGIES
+  # ⚡ TECHNOLOGIES
 
 ![Python](https://img.shields.io/badge/-Python-black?style=flat-square&logo=Python)
 ![Java](https://img.shields.io/badge/-java-E34A86?style=flat-square&logo=Java)
@@ -54,5 +56,5 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 ![VISITOR BADGE](https://visitor-badge.laobi.icu/badge?page_id=mkdirlove)
 </p>
 </details> 
-
+</div>
 <!--⭐ From [Jayson Cabrillas San Buenaventura](http://mkdirlove.github.io/)-->
