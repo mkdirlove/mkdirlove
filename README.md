@@ -43,7 +43,15 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 <p align="center">
     <img alt = "GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=mkdirlove&show_icons=true&theme=radical">
     <br>
-    <img alt = "Top Language" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mkdirlove&hide=html,&hide_border=true&title_color=5391FE&text_color=555"
+   ## ⚡ TECHNOLOGIES
+
+![Python](https://img.shields.io/badge/-Python-black?style=flat-square&logo=Python)
+![Java](https://img.shields.io/badge/-java-E34A86?style=flat-square&logo=Java)
+![Git](https://img.shields.io/badge/-Git-black?style=flat-square&logo=Git)
+![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=GitHub)
+
+
+![VISITOR BADGE](https://visitor-badge.laobi.icu/badge?page_id=mkdirlove)
 </p>
 </details> 
 
