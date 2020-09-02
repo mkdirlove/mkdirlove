@@ -31,9 +31,6 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 
 <!--[![mkdirlove's GitHub Stats](https://github-readme-stats.vercel.app/api?username=mkdirlove&show_icons=true&&them=&hide_title=false)](https://github.com/mkdirlove)-->
 ![mkdirlove's Github Stats](https://github-readme-stats.vercel.app/api?username=mkdirlove&show_icons=true&theme=radical)
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=mkdirlove&hide=TeX&layout=compact)
-
 </div>
 
 #
