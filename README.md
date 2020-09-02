@@ -2,9 +2,9 @@
 <div align="center">
 <a href="https://twitter.com/JaysonSanBuena1" target="_blank"><img src="https://img.shields.io/badge/Twitter-%231877F2.svg?&style=flat-square&logo=twitter&logoColor=white" alt="Twitter"></a> &nbsp; 
 <a href="https://www.facebook.com/mkdirlove.git" target="_blank"><img src="https://img.shields.io/badge/Facebook-%231877F2.svg?&style=flat-square&logo=facebook&logoColor=white" alt="Facebook"></a>  <br>
+![Gmail Badge](https://img.shields.io/badge/-pseudogmaing.official@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:pseudogaming.official@gmail.com)
 
-
-![Hack](https://github.com/mkdirlove/mkdirlove/blob/master/mk.gif)                                                                                                 ![Gmail Badge](https://img.shields.io/badge/-pseudogmaing.official@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:pseudogaming.official@gmail.com)
+![Hack](https://github.com/mkdirlove/mkdirlove/blob/master/mk.gif)                                                                                                 
                        
 
 <div align="center" width="50">                    
