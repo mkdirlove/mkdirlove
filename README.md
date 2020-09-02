@@ -22,10 +22,11 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 
 <details>
 <summary>𝗖𝗟𝗜𝗖𝗞 𝗧𝗢 𝗦𝗛𝗢𝗪 𝗚𝗜𝗧𝗛𝗨𝗕 𝗦𝗧𝗔𝗧𝗦 & 𝗦𝗢𝗖𝗜𝗔𝗟</summary>
+  <br>
 <p align="center">
     <img alt = "GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=mkdirlove&show_icons=true&theme=radical">
     <br>
-TENOLOGIES
+𝗧𝗘𝗖𝗛𝗡𝗢𝗟𝗢𝗚𝗜𝗘𝗦
 
 
 ![BASH](https://img.shields.io/badge/-BASH-black?style=flat-square&logo=BASH)
