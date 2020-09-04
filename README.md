@@ -25,6 +25,7 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 <p align="center">
     <img alt = "GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=mkdirlove&show_icons=true&theme=radical">
     <br>
+  [![trophy](https://github-profile-trophy.vercel.app/?username=mkdirlove)](https://github.com/ryo-ma/github-profile-trophy)
 𝗧𝗘𝗖𝗛𝗡𝗢𝗟𝗢𝗚𝗜𝗘𝗦
 
 
