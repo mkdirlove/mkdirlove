@@ -39,9 +39,8 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 <a href="https://twitter.com/JaysonSanBuena1" target="_blank"><img src="https://img.shields.io/badge/Twitter-%231877F2.svg?&style=flat-square&logo=twitter&logoColor=white" alt="Twitter"></a> &nbsp; 
 <a href="https://www.facebook.com/mkdirlove.git" target="_blank"><img src="https://img.shields.io/badge/Facebook-%231877F2.svg?&style=flat-square&logo=facebook&logoColor=white" alt="Facebook"></a>  
 <a href="sanbuenaventurajayson28@gmail.com" target="_blank"><img src="https://img.shields.io/badge/-sanbuenaventurajayson28@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:sanbuenaventurajayson28@gmail.com" alt="Gmail"></a> <br>
-
-  [![trophy](https://github-profile-trophy.vercel.app/?username=mkdirlove)](https://github.com/ryo-ma/github-profile-trophy)
 ![VISITOR BADGE](https://visitor-badge.laobi.icu/badge?page_id=mkdirlove)
+![trophy](https://github-profile-trophy.vercel.app/?username=mkdirlove)
 </p>
 </details> 
 </div>
