@@ -43,6 +43,8 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 ![VISITOR BADGE](https://visitor-badge.laobi.icu/badge?page_id=mkdirlove)
 
 ![trophy](https://github-profile-trophy.vercel.app/?username=mkdirlove&row=2)
+![trophy](https://github-profile-trophy.vercel.app/?username=ryo-ma&row=2&column=3)
+
 </p>
 </details> 
 </div>
