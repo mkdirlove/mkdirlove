@@ -36,9 +36,15 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 
 𝗦𝗢𝗖𝗜𝗔𝗟 𝗠𝗘𝗗𝗜𝗔
 
-<a href="https://twitter.com/JaysonSanBuena1" target="_blank"><img src="https://img.shields.io/badge/Twitter-%231877F2.svg?&style=flat-square&logo=twitter&logoColor=white" alt="Twitter"></a> &nbsp; 
-<a href="https://www.facebook.com/mkdirlove.git" target="_blank"><img src="https://img.shields.io/badge/Facebook-%231877F2.svg?&style=flat-square&logo=facebook&logoColor=white" alt="Facebook"></a>  
-<a href="sanbuenaventurajayson28@gmail.com" target="_blank"><img src="https://img.shields.io/badge/-sanbuenaventurajayson28@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:sanbuenaventurajayson28@gmail.com" alt="Gmail"></a> <br>
+<p align="center">
+<a href="https://github.com/mkdirlove"><img title="Github" src="https://img.shields.io/badge/Github-MKDIRLOVE-blue?style=for-the-badge&logo=github"></a>
+<a href="https://gitlab.com/mkdirlove"><img title="Gitlab" src="https://img.shields.io/badge/Gitlab-MKDIRLOVE-blue?style=for-the-badge&logo=gitlab"></a>
+</p>
+
+<p align="center">
+<a href="https://fb.com/mkdirlove.git"><img title="Facebook" src="https://img.shields.io/badge/Facebook-red?style=for-the-badge&logo=facebook"></a>
+<a href="https://m.me/mkdirlove.git"><img title="Messenger" src="https://img.shields.io/badge/Messenger-red?style=for-the-badge&logo=messenger"></a>
+<a href="https://www.instagram.com/"><img title="Instagram" src="https://img.shields.io/badge/INSTAGRAM-purple?style=for-the-badge&logo=instagram"></a>
 
 ![VISITOR BADGE](https://visitor-badge.laobi.icu/badge?page_id=mkdirlove)
 
