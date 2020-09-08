@@ -25,14 +25,6 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 <p align="center">
     <img alt = "GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=mkdirlove&show_icons=true&theme=radical">
     <br>
-𝗧𝗘𝗖𝗛𝗡𝗢𝗟𝗢𝗚𝗜𝗘𝗦
-
-
-![BASH](https://img.shields.io/badge/-BASH-black?style=flat-square&logo=BASH)
-![PYTHON](https://img.shields.io/badge/-PYTHON-black?style=flat-square&logo=PYTHON)
-![GIT](https://img.shields.io/badge/-GIT-black?style=flat-square&logo=GIT)
-![GITHUB](https://img.shields.io/badge/-GITHUB-181717?style=flat-square&logo=GITHUB)
-
 
 𝗦𝗢𝗖𝗜𝗔𝗟 𝗠𝗘𝗗𝗜𝗔
 
@@ -46,9 +38,21 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 <a href="https://m.me/mkdirlove.git"><img title="Messenger" src="https://img.shields.io/badge/Messenger-red?style=for-the-badge&logo=messenger"></a>
 <a href="https://www.instagram.com/"><img title="Instagram" src="https://img.shields.io/badge/INSTAGRAM-purple?style=for-the-badge&logo=instagram"></a>
 
-![VISITOR BADGE](https://visitor-badge.laobi.icu/badge?page_id=mkdirlove)
+𝗔𝗪𝗔𝗥𝗗𝗦
 
 ![trophy](https://github-profile-trophy.vercel.app/?username=ryo-ma&row=2&column=3)
+
+𝗧𝗘𝗖𝗛𝗡𝗢𝗟𝗢𝗚𝗜𝗘𝗦
+
+![BASH](https://img.shields.io/badge/-BASH-black?style=flat-square&logo=BASH)
+![PYTHON](https://img.shields.io/badge/-PYTHON-black?style=flat-square&logo=PYTHON)
+![GIT](https://img.shields.io/badge/-GIT-black?style=flat-square&logo=GIT)
+![GITHUB](https://img.shields.io/badge/-GITHUB-181717?style=flat-square&logo=GITHUB)
+
+
+𝗩𝗜𝗦𝗜𝗧𝗢𝗥𝗦
+
+![VISITOR BADGE](https://visitor-badge.laobi.icu/badge?page_id=mkdirlove)
 
 </p>
 </details> 
