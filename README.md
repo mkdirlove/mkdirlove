@@ -36,7 +36,7 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 <p align="center">
 <a href="https://fb.com/mkdirlove.git"><img title="Facebook" src="https://img.shields.io/badge/Facebook-red?style=for-the-badge&logo=facebook"></a>
 <a href="https://m.me/mkdirlove.git"><img title="Messenger" src="https://img.shields.io/badge/Messenger-red?style=for-the-badge&logo=messenger"></a>
-<a href="https://www.instagram.com/"><img title="Instagram" src="https://img.shields.io/badge/INSTAGRAM-purple?style=for-the-badge&logo=instagram"></a>
+<a href="https://www.instagram.com/sanbuenaventurajayson28"><img title="Instagram" src="https://img.shields.io/badge/INSTAGRAM-purple?style=for-the-badge&logo=instagram"></a>
 
 𝗔𝗪𝗔𝗥𝗗𝗦
 
