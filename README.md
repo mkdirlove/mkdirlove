@@ -55,6 +55,8 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 𝗩𝗜𝗦𝗜𝗧𝗢𝗥𝗦
 
 ![VISITOR BADGE](https://visitor-badge.laobi.icu/badge?page_id=mkdirlove)
+<a href="https://github.com/mkdirlove"><img title="mkdirlove" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mkdirlove&layout=compact"></a>
+
 
 </p>
 </details> 
