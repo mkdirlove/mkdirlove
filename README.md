@@ -81,7 +81,7 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 
 𝗚𝗜𝗧𝗛𝗨𝗕 𝗣𝗥𝗢𝗙𝗜𝗟𝗘 𝗩𝗜𝗦𝗜𝗧𝗢𝗥𝗦
 
-![VISITOR BADGE](https://visitor-badge.laobi.icu/badge?page_id=mkdirlove)
+![](https://gitwar.herokuapp.com/badge?username=mkdirlove&style=for-the-badge&label=PROFILE+VISITORS)
 </p>
 </details> 
 </div>
