@@ -79,7 +79,9 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 
 
 
-𝗚𝗜𝗧𝗛𝗨𝗕 𝗣𝗥𝗢𝗙𝗜𝗟𝗘 𝗩𝗜𝗦𝗜𝗧𝗢𝗥𝗦
+
+𝗠𝗘𝗠𝗘 𝗢𝗙 𝗧𝗛𝗘 𝗗𝗔𝗬
+
 <img src='https://random-memer.herokuapp.com/' title="Meme" alt="Please refresh the page is the meme doesn't show up.">
 
 </p>
