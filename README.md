@@ -71,17 +71,6 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 
 <br>
 <br>
-<br>
-<br>
-
-
-
-
-
-
-
-
-
 
 𝗚𝗜𝗧𝗛𝗨𝗕 𝗣𝗔𝗚𝗘 𝗩𝗜𝗦𝗜𝗧𝗢𝗥𝗦
 
