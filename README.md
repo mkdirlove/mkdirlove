@@ -76,7 +76,7 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 
 <table>
   <tr>
-    <td>You are visitor</td>
+    <td></td>
     <td><img src="https://profile-counter.glitch.me/mkdirlove/count.svg" alt="" /></td>
   </tr>
 </table>
