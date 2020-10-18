@@ -59,7 +59,20 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 ![GITHUB](https://img.shields.io/badge/-GITHUB-181717?style=flat-square&logo=GITHUB)
 -->
 
-<i class="fa fa-github" aria-hidden="true"></i>
+
+<a href="https://www.php.net/" title="PHP"><img src="icons/php.png" /></a>
+<a href="https://www.python.org/" title="Python"><img src="icons/python.png" /></a>
+<a href="https://git-scm.com/" title="Git"><img src="icons/git.png" /></a>
+<a href="https://github.com/" title="GitHub"><img src="icons/github.png" /></a>
+<a href="https://gitlab.com/" title="GitLab"><img src="icons/gitlab.png" /></a>
+
+
+
+
+
+
+
+
 
 
 
