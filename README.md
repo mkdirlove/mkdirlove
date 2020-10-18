@@ -80,10 +80,17 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 
 
 
-𝗠𝗘𝗠𝗘 𝗢𝗙 𝗧𝗛𝗘 𝗗𝗔𝗬
+𝗚𝗜𝗧𝗛𝗨𝗕 𝗣𝗔𝗚𝗘 𝗩𝗜𝗦𝗜𝗧𝗢𝗥𝗦
 
-<img src='https://random-memer.herokuapp.com/' title="Meme" alt="Please refresh the page is the meme doesn't show up.">
+<table>
+  <tr>
+    <td>You are visitor</td>
+    <td><img src="https://profile-counter.glitch.me/mkdirlove/count.svg" alt="" /></td>
+  </tr>
+</table>
 
+
+<!-- <img src='https://random-memer.herokuapp.com/' title="Meme" alt="Please refresh the page is the meme doesn't show up."> -->
 </p>
 </details> 
 </div>
