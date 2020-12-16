@@ -3,7 +3,7 @@
 <!--![Hack](https://github.com/mkdirlove/mkdirlove/blob/master/main.gif-->
 <!--![Hacked](https://media.giphy.com/media/6BoaKX96gLGa1bQ9Ww/giphy.gif)-->
 <!--![Hack](https://github.com/mkdirlove/mkdirlove/blob/master/full3.gif)-->
-<p align="center"><img src="https://i.giphy.com/RThN0hOS2GO4M.gif" height="200" width="700" /></p> 
+<p align="center"><img src="https://i.giphy.com/RThN0hOS2GO4M.gif" height="400" width="800" /></p> 
                        
 
 <div align="center" width="50">                    
