@@ -53,6 +53,8 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 <a href="https://m.me/mkdirlove.git"><img title="Messenger" src="https://img.shields.io/badge/Messenger-red?style=for-the-badge&logo=messenger"></a>
 <a href="https://www.instagram.com/sanbuenaventurajayson28"><img title="Instagram" src="https://img.shields.io/badge/INSTAGRAM-purple?style=for-the-badge&logo=instagram"></a>
 
+![Followers](https://img.shields.io/github/followers/mkdirlove?label=Followers&style=for-the-badge&logo=github) ![Total Stars](https://img.shields.io/github/stars/mkdirlove?affiliations=OWNER&style=for-the-badge&logo=github)
+
 𝗚𝗜𝗧𝗛𝗨𝗕 𝗔𝗪𝗔𝗥𝗗𝗦
 
 ![trophy](https://github-profile-trophy.vercel.app/?username=ryo-ma&row=2&column=3)
@@ -83,10 +85,12 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 
 ![VSCode](https://img.icons8.com/color/30/visual-studio-code-2019.png)![Windows](https://img.icons8.com/color/30/windows-10.png)![Ubuntu](https://img.icons8.com/color/30/ubuntu--v1.png)![Linux](https://img.icons8.com/color/30/linux.png)![Kali Linux](https://img.icons8.com/color/30/kali-linux.png)![Console](https://img.icons8.com/color/30/console.png)
 
+
 𝗚𝗜𝗧𝗛𝗨𝗕 𝗣𝗔𝗚𝗘 𝗩𝗜𝗦𝗜𝗧𝗢𝗥𝗦
 
 <div align="center">
 <p></p>
+
 <img src="https://profile-counter.glitch.me/mkdirlove/count.svg" alt="hit counter" align="center">
 </div>
 
