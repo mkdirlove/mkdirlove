@@ -18,7 +18,7 @@
 
 <h2> 𝗛𝗲𝗹𝗹𝗼 𝘁𝗵𝗲𝗿𝗲, 𝗳𝗲𝗹𝗹𝗼𝘄 <𝚑𝚊𝚌𝚔𝚎𝚛𝚜/> 𝗮𝗻𝗱 <𝚌𝚘𝚍𝚎𝚛𝚜/>! <img src="https://github.com/dheeraj-2000/dheeraj-2000/blob/master/gifs/Hi.gif" width="30px"></h2> <br>
 
-You have finally discovered my Github profile. <br>
+You have finally discovered my GitHub profile. <br>
 Please feel free to clone projects, raise issues and submit PRs if you think something could be better. <br>
 Ask me anything <a href="https://github.com/mkdirlove/mkdirlove/issues/new"><b>here</b></a><br>
 or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
