@@ -13,11 +13,8 @@
 <div align="center" width="50">                    
 
 </div>
-
-
-[![Typing SVG](http://readme-typing-svg.herokuapp.com?color=00F700&size=40&width=900&lines=Hello+there%2C+felow+%3Chackers%2F%3E+and+%3Ccoderz%2F%3E!)](https://git.io/typing-svg)
   
-
+[![Typing SVG](http://readme-typing-svg.herokuapp.com?color=00F700&size=40&width=999&lines=Hello+there%2C+felow+%3Chackers%2F%3E+and+%3Ccoderz%2F%3E!)](https://git.io/typing-svg)
 
 
 You have finally discovered my GitHub profile. <br>
