@@ -15,7 +15,7 @@
 </div>
 
 
-[![Typing SVG](http://readme-typing-svg.herokuapp.com?color=32F700&size=32&vCenter=true&width=900&lines=%F0%9D%97%9B%F0%9D%97%B2%F0%9D%97%B9%F0%9D%97%B9%F0%9D%97%BC+%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%97%BF%F0%9D%97%B2%2C+%F0%9D%97%B3%F0%9D%97%B2%F0%9D%97%B9%F0%9D%97%B9%F0%9D%97%BC%F0%9D%98%84+%3C%F0%9D%9A%91%F0%9D%9A%8A%F0%9D%9A%8C%F0%9D%9A%94%F0%9D%9A%8E%F0%9D%9A%9B%F0%9D%9A%9C%2F%3E+%F0%9D%97%AE%F0%9D%97%BB%F0%9D%97%B1+%3C%F0%9D%9A%8C%F0%9D%9A%98%F0%9D%9A%8D%F0%9D%9A%8E%F0%9D%9A%9B%F0%9D%9A%9C%2F%3E!)](https://git.io/typing-svg)<img src="https://github.com/dheeraj-2000/dheeraj-2000/blob/master/gifs/Hi.gif" width="30px">
+[![Typing SVG](http://readme-typing-svg.herokuapp.com?color=32F700&size=32&vCenter=true&width=900&lines=%F0%9D%97%9B%F0%9D%97%B2%F0%9D%97%B9%F0%9D%97%B9%F0%9D%97%BC+%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%97%BF%F0%9D%97%B2%2C+%F0%9D%97%B3%F0%9D%97%B2%F0%9D%97%B9%F0%9D%97%B9%F0%9D%97%BC%F0%9D%98%84+%3C%F0%9D%9A%91%F0%9D%9A%8A%F0%9D%9A%8C%F0%9D%9A%94%F0%9D%9A%8E%F0%9D%9A%9B%F0%9D%9A%9C%2F%3E+%F0%9D%97%AE%F0%9D%97%BB%F0%9D%97%B1+%3C%F0%9D%9A%8C%F0%9D%9A%98%F0%9D%9A%8D%F0%9D%9A%8E%F0%9D%9A%9B%F0%9D%9A%9C%2F%3E!)](https://git.io/typing-svg)
   
 
 
