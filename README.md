@@ -15,7 +15,7 @@
 </div>
 
 
-[![Typing SVG](http://readme-typing-svg.herokuapp.com?color=32F700&size=32&vCenter=true&width=900&lines=%F0%9D%97%9B%F0%9D%97%B2%F0%9D%97%B9%F0%9D%97%B9%F0%9D%97%BC+%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%97%BF%F0%9D%97%B2%2C+%F0%9D%97%B3%F0%9D%97%B2%F0%9D%97%B9%F0%9D%97%B9%F0%9D%97%BC%F0%9D%98%84+%3C%F0%9D%9A%91%F0%9D%9A%8A%F0%9D%9A%8C%F0%9D%9A%94%F0%9D%9A%8E%F0%9D%9A%9B%F0%9D%9A%9C%2F%3E+%F0%9D%97%AE%F0%9D%97%BB%F0%9D%97%B1+%3C%F0%9D%9A%8C%F0%9D%9A%98%F0%9D%9A%8D%F0%9D%9A%8E%F0%9D%9A%9B%F0%9D%9A%9C%2F%3E!)](https://git.io/typing-svg)
+[![Typing SVG](http://readme-typing-svg.herokuapp.com?color=00F700&size=40&width=900&lines=Hello+there%2C+felow+%3Chackers%2F%3E+and+%3Ccoderz%2F%3E!)](https://git.io/typing-svg)
   
 
 
