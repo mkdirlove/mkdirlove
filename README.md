@@ -56,6 +56,7 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 <a href="https://www.instagram.com/sanbuenaventurajayson28"><img title="Instagram" src="https://img.shields.io/badge/INSTAGRAM-purple?style=for-the-badge&logo=instagram"></a>
 
 ![Followers](https://img.shields.io/github/followers/mkdirlove?label=Followers&style=for-the-badge&logo=github) ![Total Stars](https://img.shields.io/github/stars/mkdirlove?affiliations=OWNER&style=for-the-badge&logo=github)
+![Stats](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=mikosecsos&theme=monokai)
 
 𝗚𝗜𝗧𝗛𝗨𝗕 𝗔𝗪𝗔𝗥𝗗𝗦
 
