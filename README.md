@@ -42,8 +42,7 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
     <img alt = "GitHub Streak Stats" src="https://github-readme-streak-stats.herokuapp.com/?user=mkdirlove">  
     <img alt = "GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=mkdirlove&show_icons=true&theme=monokai">
     <img alt = "GitHub Stats" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=mikosecsos&theme=monokai">
-
-    <br>
+<br>
 
 𝗦𝗢𝗖𝗜𝗔𝗟 𝗠𝗘𝗗𝗜𝗔
 
