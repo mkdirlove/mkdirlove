@@ -40,7 +40,7 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
   <br>
 <p align="center">
     <img alt = "GitHub Streak Stats" src="https://github-readme-streak-stats.herokuapp.com/?user=mkdirlove">  
-    <img alt = "GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=mkdirlove&show_icons=true&theme=radical">
+    <img alt = "GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=mkdirlove&show_icons=true&theme=monokai">
     <br>
 
 𝗦𝗢𝗖𝗜𝗔𝗟 𝗠𝗘𝗗𝗜𝗔
@@ -56,8 +56,6 @@ or <a href="mailto:sanbuenaventurajayson28@gmail.com"><b>email</b></a> me
 <a href="https://www.instagram.com/sanbuenaventurajayson28"><img title="Instagram" src="https://img.shields.io/badge/INSTAGRAM-purple?style=for-the-badge&logo=instagram"></a>
 
 ![Followers](https://img.shields.io/github/followers/mkdirlove?label=Followers&style=for-the-badge&logo=github) ![Total Stars](https://img.shields.io/github/stars/mkdirlove?affiliations=OWNER&style=for-the-badge&logo=github)
-
-  ![Stats](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=mikosecsos&theme=monokai)
 
 𝗚𝗜𝗧𝗛𝗨𝗕 𝗔𝗪𝗔𝗥𝗗𝗦
 
