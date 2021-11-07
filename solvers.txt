@@ -8,8 +8,8 @@ SOLVERS:
 2.lux
 3.Haxcoder
 4.GrinXz
-5.M0nk3y
-6.
+5.xZyle
+6.M0nk3y
 7.
 8.
 9.
