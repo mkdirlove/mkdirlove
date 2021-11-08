@@ -6,8 +6,10 @@
 <!--!<p align="center"><img src="https://i.giphy.com/RThN0hOS2GO4M.gif" height="400" width="800" /></p> -->
 <!--<p align="center"><img src="https://media.giphy.com/media/3o6fIWnqD7xsicBFiE/giphy.gif" height="400" width="800" /></p>-->
 <!-- <p align="center"><img src="https://media.giphy.com/media/CcwLAV11cALh3OuEJ5/giphy.gif" height="200" width="800" /></p> 
-<p align="center"><img src="https://github.com/mkdirlove/mkdirlove/blob/master/sudo3.gif" height="360" width="840" /></p> -->
-<p align="center"><img src="https://github.com/mkdirlove/mkdirlove/blob/master/final-sx-wall.jpg" height="360" width="840" /></p>
+<p align="center"><img src="https://github.com/mkdirlove/mkdirlove/blob/master/sudo3.gif" height="360" width="840" /></p> 
+<p align="center"><img src="https://github.com/mkdirlove/mkdirlove/blob/master/final-sx-wall.jpg" height="360" width="840" /></p> -->
+<p align="center"><img src="https://github.com/mkdirlove/mkdirlove/blob/master/sx-new.jpg" height="360" width="840" /></p>
+
 
 
                        
