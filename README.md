@@ -9,7 +9,7 @@
 <p align="center"><img src="https://github.com/mkdirlove/mkdirlove/blob/master/sudo3.gif" height="360" width="840" /></p> 
 <p align="center"><img src="https://github.com/mkdirlove/mkdirlove/blob/master/final-sx-wall.jpg" height="360" width="840" /></p> 
 <p align="center"><img src="https://raw.githubusercontent.com/mkdirlove/mkdirlove/master/sx.gif" height="360" width="840" /></p>-->
-<p align="center"><img src="https://raw.githubusercontent.com/mkdirlove/mkdirlove/master/banner.gif" height="330" width="840" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/mkdirlove/mkdirlove/master/banner.gif" height="320" width="840" /></p>
 
 
 
