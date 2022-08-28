@@ -3,8 +3,8 @@
 
 Solvers List 
 
-1. Kido
-2. Kumi
+1. Kumi
+2. Haxcoder
 3. MR.$UD0
 4.
 5.
