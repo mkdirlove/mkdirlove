@@ -20,5 +20,5 @@ GitHub: https://github.com/DefacerPh
 ### Greetz to all the members of DefacerPH
 
 ```
-[ R1Z4L | N16H7 CR4WL3R | K1LL3RB4LL | Alex | ph.M1k3y | Cyb3rFr0st | Haxcoder | 0xJoshua | L4ZYG33K | MR.$UD0 | xZyle | Silent | xmadara | Shigx | 0xH4v0x ]
+[ R1Z4L | N16H7 CR4WL3R | K1LL3RB4LL | Alex | ph.M1k3y | Cyb3rFr0st | Haxcoder | 0xJoshua | L4ZYG33K | MR.$UD0 | xZyle | Silent | Shigx | 0xH4v0x ]
 ```
