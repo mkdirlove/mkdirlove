@@ -22,3 +22,7 @@ GitHub: https://github.com/DefacerPh
 ```
 [ R1Z4L | N16H7 CR4WL3R | K1LL3RB4LL | Alex | ph.M1k3y | Cyb3rFr0st | Haxcoder | 0xJoshua | L4ZYG33K | MR.$UD0 | xZyle | Silent | Shigx | 0xH4v0x ]
 ```
+
+<p align="center">
+  <img src="https://1.bp.blogspot.com/-lKJKpqe85y4/XVVYr9-WHRI/AAAAAAAAB9M/-h245-Fg-nYbZqvO0RV0tlfhxQ8sqvEawCLcBGAs/s1600/Sampler.gif">
+</p>
