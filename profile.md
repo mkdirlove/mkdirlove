@@ -1,10 +1,6 @@
 <h1 align="center">Hi 👋, I'm Jayson Cabrillas San Buenaventura</h1>
 <h3 align="center">A junior penetration testing from the Philippines</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=mkdirlove&label=Profile%20views&color=0e75b6&style=flat" alt="mkdirlove" /> </p>
-
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=mkdirlove" alt="mkdirlove" /></a> </p>
-
 - 🔭 I’m currently working on [profile-readme-generator](https://github.com/mkdirlove/profile-readme-generator)
 
 - 🌱 I’m currently learning **Python for Penetration Testing**
