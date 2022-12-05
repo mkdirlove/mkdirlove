@@ -2,7 +2,7 @@
   <br>
   <a href="https://defacerph.neocities.org"><img src="https://defacerph.neocities.org/assets/img/logo.gif" hight="200" width="300" alt="DefacerPH"></a>
   <br>
-  Break into your security Since 2008
+  Breaking your security since 2008
 </h1>
 
 ### Like and Follow us on:
