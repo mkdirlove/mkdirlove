@@ -6,7 +6,7 @@ echo "ChatGPT.sh Lite" | toilet -f smbraille
 echo ""
 
 # API  token and Endpoint URL
-API_KEY=${1:-"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"}
+API_KEY=${1:-"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"}
 ENDPOINT_URL=${2:-"https://api.openai.com/v1/completions"}
 
 # Start a new conversation by deleting the old one
