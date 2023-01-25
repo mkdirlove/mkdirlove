@@ -2,15 +2,12 @@
 
 # My fancy banner
 clear
-echo "DefacerPH x ChatGPT" | toilet -f smbraille
-echo ""  
+echo "ChatGPT.sh Lite" | toilet -f smbraille
+echo ""
 
-# Set the API key from the environment variable or directly in the script
-# Replace "my key" with your actual API key
-API_KEY="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"
-
-# Set the endpoint URL for the OpenAI API
-ENDPOINT_URL="https://api.openai.com/v1/completions"
+# API  token and Endpoint URL
+API_KEY=${1:-"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"}
+ENDPOINT_URL=${2:-"https://api.openai.com/v1/completions"}
 
 # Start a new conversation by deleting the old one
 rm -f ./chat.log
@@ -19,20 +16,16 @@ rm -f ./chat.log
 while true; do
 
 # Display a prompt for the user to enter their question
-printf "\033[1m@You > \033[0m"
-
-# Read the user's question
-read -r QUESTION
+read -p "@You > " QUESTION
 
 # Write the question into the chat.log
-echo -n "human: $QUESTION " >> ./chat.log
+echo "You: $QUESTION " >> ./chat.log
 
 # Add some nice terminal formatting
-tput sgr0
-echo -e "\e[1m------------"
+echo "------------"
 
 # Read the chat.log, including the user's last question, ready to send to chatGPT
-QUERY=`cat ./chat.log`
+QUERY=$(<./chat.log)
 
 # Set the JSON payload for the request
 payload="{
@@ -52,16 +45,12 @@ RESPONSE_MESSAGE=$(echo "$response" | jq -r '.choices[0].text')
 
 # Print the response
 echo -e "\n"
-printf "\033[1m@ChatGPT / OpenAI > \033[0m"
-echo "$RESPONSE_MESSAGE"
+echo "@ChatGPT / OpenAI > $RESPONSE_MESSAGE"
 
 # Write the response into a reponse.log
-echo -n "ai:$RESPONSE_MESSAGE " > ./response.log
-
-# Remove rogue new-line formatting and add the response to the chat.log
-echo -n "$(<./response.log )" | tr -d '\n' >> ./chat.log
+echo -n "ChatGPT.sh Lite:$RESPONSE_MESSAGE " >> ./chat.log
 
 # More fancy terminal formatting
-echo -e "\e[1m------------\n"
+echo -e "\n------------\n"
 
 done
