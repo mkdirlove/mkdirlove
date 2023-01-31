@@ -10,7 +10,7 @@
 &nbsp;&nbsp;&nbsp;
 <a href="https://github.com/mkdirlove"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mkdirlove&layout=compact&theme=react&hide_border=true" /> -->
 <img src="https://streak-stats.demolab.com?user=mkdirlove&theme=dark">
-<a href="https://github.com/mkdirlove"><img width=700 src="https://github-profile-trophy.vercel.app/?username=mkdirlove&theme=darkhub&row=2"/>
+<a href="https://github.com/mkdirlove"><img width=500 src="https://github-profile-trophy.vercel.app/?username=mkdirlove&theme=darkhub&title=MultiLanguage,Followers,Repositories,Stars,Commits,PullRequest"/>
 </a></p>
 
 ### Like and Follow us on:
