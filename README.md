@@ -6,9 +6,9 @@
 </h1>
 
 <p align="center"><a href="https://github.com/mkdirlove">
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=mkdirlove&show_icons=true&include_all_commits=true&theme=react&cache_seconds=3200&hide_border=true" /></a>
+<!-- <img height="165" src="https://github-readme-stats.vercel.app/api?username=mkdirlove&show_icons=true&include_all_commits=true&theme=react&cache_seconds=3200&hide_border=true" /></a>
 &nbsp;&nbsp;&nbsp;
-<a href="https://github.com/mkdirlove"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mkdirlove&layout=compact&theme=react&hide_border=true" />
+<a href="https://github.com/mkdirlove"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mkdirlove&layout=compact&theme=react&hide_border=true" /> -->
 <img src="https://streak-stats.demolab.com?user=mkdirlove&theme=dark">
 </a></p>
 
