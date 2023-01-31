@@ -22,3 +22,5 @@ GitHub: https://github.com/DefacerPh
 ```
 [ R1Z4L | N16H7 CR4WL3R | K1LL3RB4LL | Alex | ph.M1k3y | Cyb3rFr0st | Haxcoder | 0xJoshua | L4ZYG33K | MR.$UD0 | xZyle | Silent | Shigx | 0xH4v0x ]
 ```
+<h3 align="center"><b><i>🏆 Github Statistics :</i></b></h3>
+<a href="https://github.com/mkdirlove"><img width=550 src="https://github-profile-trophy.vercel.app/?username=mkdirlove&theme=dracula&no-frame=true&title=Followers,Stars,Commit,Repository,Issues"/></a>
