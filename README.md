@@ -10,6 +10,7 @@
 &nbsp;&nbsp;&nbsp;
 <a href="https://github.com/mkdirlove"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mkdirlove&layout=compact&theme=react&hide_border=true" />
 </a></p>
+<img src="https://streak-stats.demolab.com?user=mkdirlove&theme=dark">
 
 ### Like and Follow us on:
 
