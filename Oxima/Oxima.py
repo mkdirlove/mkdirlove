@@ -1,10 +1,20 @@
 import keyword
 
-print("List of Python keywords:")
-for keyword in keyword.kwlist:
-    print(keyword, end=", ")
+keywords = keyword.kwlist
+num_keywords = len(keywords)
+max_len = max(len(kw) for kw in keywords)
+num_cols = 4
+col_width = max_len + 2
+num_rows = (num_keywords + num_cols - 1) // num_cols
 
-print("\n\n")
+print("---------------- Python Keywords List ----------------")
+for i in range(num_rows):
+    row = keywords[i::num_rows]
+    row += [''] * (num_cols - len(row))
+    print("".join(word.ljust(col_width) for word in row))
+    
+print("------------------------------------------------------\n\n")
+
 # Boolean variables
 a = True
 b = False
