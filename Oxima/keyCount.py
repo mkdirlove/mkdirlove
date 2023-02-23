@@ -4,7 +4,7 @@ import argparse
 from tabulate import tabulate
 
 # create ArgumentParser object
-parser = argparse.ArgumentParser(description="Python Keyword Counter")
+parser = argparse.ArgumentParser(description="A simple Python script to count all keywords in a Python file.")
 
 # add arguments
 parser.add_argument('-f', '--file', required=True, help='Path of the Python file to be analyzed')
