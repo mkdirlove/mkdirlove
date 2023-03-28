@@ -3,6 +3,7 @@
 # Function to check if the script is running with sudo permission
 function check_sudo_permission() {
     if [ "$(id -u)" -ne 0 ]; then
+        clear
         echo "This script must be run with sudo permission."
         exit 1
     fi
