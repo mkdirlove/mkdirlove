@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://defacerph.neocities.org"><img src="https://defacerph.neocities.org/assets/img/logo.gif" hight="200" width="300" alt="DefacerPH"></a>
+  <a href="https://defacerph.neocities.org"><img src="logo.png" hight="200" width="300" alt="DefacerPH"></a>
   <br>
   Breaking your security since 2008
 </h1>
