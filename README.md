@@ -16,6 +16,11 @@
 
 ### Like and Follow us on:
 
+## GitHub Metrics and Page Views 📊
+
+![GitHub Profile Summary](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=mkdirlove&theme=dracula)
+![GitHub Repositories Per Language](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=mkdirlove&theme=dracula)
+![GitHub Productive Time](http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=mkdirlove&theme=dracula&utcOffset=8)
 ```
 Facebook: https://www.facebook.com/Defacerph2008
 ```
