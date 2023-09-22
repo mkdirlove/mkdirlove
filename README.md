@@ -12,15 +12,16 @@
 <img src="https://streak-stats.demolab.com?user=mkdirlove&theme=dark">
   <br>
 <a href="https://github.com/mkdirlove"><img width=500 src="https://github-profile-trophy.vercel.app/?username=mkdirlove&theme=darkhub&title=MultiLanguage,Followers,Repositories,Stars,Commits,PullRequest"/>
-</a></p>
 
-### Like and Follow us on:
-
-## GitHub Metrics and Page Views 📊
+### GitHub Metrics and Page Views 📊
 
 ![GitHub Profile Summary](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=mkdirlove&theme=dracula)
 ![GitHub Repositories Per Language](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=mkdirlove&theme=dracula)
 ![GitHub Productive Time](http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=mkdirlove&theme=dracula&utcOffset=8)
+</a></p>
+
+### Like and Follow us on:
+
 ```
 Facebook: https://www.facebook.com/Defacerph2008
 ```
