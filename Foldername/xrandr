@@ -1,0 +1,1 @@
+xrandr --output DP-1 --auto --output VGA-1-1 --auto --left-of DP-1
