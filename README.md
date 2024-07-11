@@ -2,7 +2,7 @@
   <br>
   <a href="https://defacerph.neocities.org"><img src="logo.png" hight="200" width="300" alt="DefacerPH"></a>
   <br>
-  WE SEARCH, WE TEST, AND WE PENETRATE
+  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=23&pause=1000&color=00F72F&random=false&width=435&lines=My+crime+is+that+of+curiuosity!)](https://git.io/typing-svg)
 </h1>
 
 <p align="center"><a href="https://github.com/mkdirlove">
