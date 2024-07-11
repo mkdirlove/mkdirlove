@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://defacerph.neocities.org"><img src="logo.png" hight="200" width="300" alt="DefacerPH"></a>
+  <a href="https://defacerph.neocities.org"><img src="https://cdn-icons-png.flaticon.com/128/6071/6071588.png" hight="200" width="300" alt="DefacerPH"></a>
   <br>
   Hello there! 
 </h1>
