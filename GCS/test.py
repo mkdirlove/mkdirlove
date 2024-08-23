@@ -72,7 +72,7 @@ def get_database_list(host, use_ssl, server):
             host, e, e.output.decode()
         ))
         return []
-
+        
 def stream_database_to_gcs(dump_command, gcs_path, db):
     start_time = time.time()
     buffer = io.BytesIO()
@@ -95,6 +95,10 @@ def stream_database_to_gcs(dump_command, gcs_path, db):
                 if not chunk:
                     break
                 gz_out.write(chunk)
+
+        # Ensure all data is written to the buffer
+        gz_out.flush()
+        buffer.seek(0)
 
         # Close dump process and check for errors
         dump_proc.stdout.close()
@@ -120,6 +124,7 @@ def stream_database_to_gcs(dump_command, gcs_path, db):
     except Exception as e:
         logging.error("Unexpected error streaming database {} to GCS: {}".format(db, e))
     finally:
+        # Ensure buffer is properly managed
         buffer.close()
 
 def main():
