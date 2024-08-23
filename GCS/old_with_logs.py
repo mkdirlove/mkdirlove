@@ -79,13 +79,25 @@ def execute_subprocess(command):
     return subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
 def upload_stream_to_gcs(stream, bucket_name, gcs_path):
-    """Upload a stream directly to Google Cloud Storage."""
+    """Upload a stream to Google Cloud Storage using a BytesIO buffer."""
     client = storage.Client.from_service_account_json(KEY_FILE)
     bucket = client.bucket(bucket_name)
     blob = bucket.blob(gcs_path)
 
     logging.info("Starting GCS upload process")
-    blob.upload_from_file(stream, content_type='application/gzip')
+    with io.BytesIO() as buffer:
+        # Read from stream and write to buffer
+        while True:
+            chunk = stream.read(4096)
+            if not chunk:
+                break
+            buffer.write(chunk)
+        
+        # Ensure the buffer is at the beginning before uploading
+        buffer.seek(0)
+        
+        # Upload the buffer to GCS
+        blob.upload_from_file(buffer, content_type='application/gzip')
 
 def handle_errors(dump_proc, gzip_proc):
     """Handle errors from subprocesses."""
