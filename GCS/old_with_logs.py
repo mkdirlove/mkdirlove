@@ -108,10 +108,6 @@ def stream_database_to_gcs(dump_command, gcs_path, db):
                 logging.error("Invalid file object: {}".format(memfile))
                 return
 
-        # Wait for processes to complete and check for errors
-        dump_output, dump_err = dump_proc.communicate()
-        gzip_output, gzip_err = gzip_proc.communicate()
-
         elapsed_time = time.time() - start_time
         logging.info("Dumped and streamed database {} to GCS successfully in {:.2f} seconds.".format(db, elapsed_time))
 
