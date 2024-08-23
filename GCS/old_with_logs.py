@@ -4,6 +4,7 @@ import subprocess
 import datetime
 import logging
 import configparser
+import io
 from google.cloud import storage
 
 # Backup and log path
@@ -86,7 +87,6 @@ def stream_database_to_gcs(dump_command, gcs_path, db):
         logging.info("Starting gzip process")
         # Start the gzip process
         gzip_proc = subprocess.Popen(["gzip"], stdin=dump_proc.stdout, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        dump_proc.stdout.close()  # Allow dump_proc to receive a SIGPIPE if gzip_proc exits
 
         # Initialize Google Cloud Storage client
         client = storage.Client.from_service_account_json(KEY_FILE)
@@ -94,11 +94,15 @@ def stream_database_to_gcs(dump_command, gcs_path, db):
         blob = bucket.blob(gcs_path)
 
         logging.info("Starting GCS upload process")
-        # Stream the gzip output directly to the GCS blob
-        with gzip_proc.stdout as f:
-            blob.upload_from_file(f, content_type='application/gzip')
+        with io.BytesIO() as memfile:
+            for chunk in iter(lambda: gzip_proc.stdout.read(4096), b''):
+                memfile.write(chunk)
+
+            memfile.seek(0)
+            blob.upload_from_file(memfile, content_type='application/gzip')
 
         # Wait for processes to complete and check for errors
+        dump_proc.stdout.close()  # Allow dump_proc to receive a SIGPIPE if gzip_proc exits
         dump_output, dump_err = dump_proc.communicate()
         gzip_output, gzip_err = gzip_proc.communicate()
 
@@ -150,7 +154,9 @@ def main():
                 logging.info("Backing up database: {}".format(db))
                 gcs_path = os.path.join(GCS_PATH, SERVER, "{}_{}.sql.gz".format(current_date, db))
                 dump_command = [
-                    "mysqldump", "-u{}".format(DB_USR), "-p{}".format(DB_PWD), "-h", HOST, db
+                    "mysqldump", "-u{}".format(DB_USR), "-p{}".format(DB_PWD), "-h", HOST, db,
+                    "--set-gtid-purged=OFF", "--single-transaction", "--quick",
+                    "--triggers", "--events", "--routines"
                 ]
                 if use_ssl:
                     dump_command += [
