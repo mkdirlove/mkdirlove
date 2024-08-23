@@ -75,46 +75,43 @@ def get_database_list(host, use_ssl, server):
         ))
         return []
 
-def execute_subprocess(command):
-    """Execute a subprocess command and return the process."""
-    return subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-
-def upload_stream_to_gcs(stream, bucket_name, gcs_path):
-    """Upload a stream to Google Cloud Storage using a buffered approach."""
-    client = storage.Client.from_service_account_json(KEY_FILE)
-    bucket = client.bucket(bucket_name)
-    blob = bucket.blob(gcs_path)
-
-    logging.info("Starting GCS upload process")
-    
-    with io.BytesIO() as buffer:
-        while True:
-            chunk = stream.read(CHUNK_SIZE)
-            if not chunk:
-                break
-            buffer.write(chunk)
-            logging.debug("Read chunk of size %d bytes", len(chunk))
-
-        # Ensure the buffer is at the beginning before uploading
-        buffer.seek(0)
-        
-        # Upload the buffer to GCS
-        blob.upload_from_file(buffer, content_type='application/gzip')
-
-def handle_errors(dump_proc, gzip_proc):
-    """Handle errors from subprocesses."""
-    dump_output, dump_err = dump_proc.communicate()
-    gzip_output, gzip_err = gzip_proc.communicate()
-
-    if dump_proc.returncode != 0:
-        logging.error("mysqldump failed: %s", dump_err.decode() if dump_err else 'No error message')
-        return False
-    if gzip_proc.returncode != 0:
-        logging.error("gzip failed: %s", gzip_err.decode() if gzip_err else 'No error message')
-        return False
-    return True
-
 def stream_database_to_gcs(dump_command, gcs_path, db):
+    """Stream a database dump to Google Cloud Storage using gzip compression."""
+    
+    def execute_subprocess(command):
+        """Execute a subprocess command and return the process."""
+        return subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+    def upload_stream_to_gcs(stream, bucket_name, gcs_path):
+        """Upload a stream to Google Cloud Storage using chunked upload."""
+        client = storage.Client.from_service_account_json(KEY_FILE)
+        bucket = client.bucket(bucket_name)
+        blob = bucket.blob(gcs_path)
+
+        logging.info("Starting GCS upload process")
+        
+        # Create a write stream directly to GCS
+        with blob.open("wb") as gcs_stream:
+            while True:
+                chunk = stream.read(CHUNK_SIZE)
+                if not chunk:
+                    break
+                gcs_stream.write(chunk)
+                logging.debug("Uploaded chunk of size %d bytes", len(chunk))
+
+    def handle_errors(dump_proc, gzip_proc):
+        """Handle errors from subprocesses."""
+        dump_output, dump_err = dump_proc.communicate()
+        gzip_output, gzip_err = gzip_proc.communicate()
+
+        if dump_proc.returncode != 0:
+            logging.error("mysqldump failed: %s", dump_err.decode() if dump_err else 'No error message')
+            return False
+        if gzip_proc.returncode != 0:
+            logging.error("gzip failed: %s", gzip_err.decode() if gzip_err else 'No error message')
+            return False
+        return True
+
     start_time = time.time()
 
     try:
@@ -139,7 +136,7 @@ def stream_database_to_gcs(dump_command, gcs_path, db):
 
     except Exception as e:
         logging.error("Unexpected error streaming database %s to GCS: %s", db, e)
-      
+
 def main():
     """Main function to execute the backup process."""
     current_date = datetime.datetime.now().strftime("%Y-%m-%d")
