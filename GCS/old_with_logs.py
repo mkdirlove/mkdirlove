@@ -94,9 +94,9 @@ def stream_database_to_gcs(dump_command, gcs_path, db):
         blob = bucket.blob(gcs_path)
 
         logging.info("Starting GCS upload process")
-        # Upload directly from the gzip_proc stdout stream
-        blob.upload_from_file(gzip_proc.stdout, content_type='application/gzip')
-        gzip_proc.stdout.close()
+        # Stream the gzip output directly to the GCS blob
+        with gzip_proc.stdout as f:
+            blob.upload_from_file(f, content_type='application/gzip')
 
         # Wait for processes to complete and check for errors
         dump_output, dump_err = dump_proc.communicate()
@@ -114,6 +114,7 @@ def stream_database_to_gcs(dump_command, gcs_path, db):
 
     except Exception as e:
         logging.error("Unexpected error streaming database {} to GCS: {}".format(db, e))
+
 
 def main():
     """Main function to execute the backup process."""
