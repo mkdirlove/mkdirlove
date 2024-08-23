@@ -145,9 +145,7 @@ def main():
                 logging.info("Backing up database: {}".format(db))
                 gcs_path = os.path.join(GCS_PATH, SERVER, "{}_{}.sql.gz".format(current_date, db))
                 dump_command = [
-                    "mysqldump", "-u{}".format(DB_USR), "-p{}".format(DB_PWD), "-h", HOST, db,
-                    "--set-gtid-purged=OFF", "--single-transaction", "--quick",
-                    "--triggers", "--events", "--routines"
+                    "mysqldump", "-u{}".format(DB_USR), "-p{}".format(DB_PWD), "-h", HOST, db
                 ]
                 if use_ssl:
                     dump_command += [
