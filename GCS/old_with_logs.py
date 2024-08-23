@@ -86,6 +86,7 @@ def stream_database_to_gcs(dump_command, gcs_path, db):
         logging.info("Starting gzip process")
         # Start the gzip process
         gzip_proc = subprocess.Popen(["gzip"], stdin=dump_proc.stdout, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        dump_proc.stdout.close()  # Allow dump_proc to receive a SIGPIPE if gzip_proc exits
 
         # Initialize Google Cloud Storage client
         client = storage.Client.from_service_account_json(KEY_FILE)
