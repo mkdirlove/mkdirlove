@@ -84,29 +84,25 @@ def stream_database_to_gcs(dump_command, gcs_path, db):
         # Start the dump process
         dump_proc = subprocess.Popen(dump_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
-        logging.info("Starting gzip process")
-        # Start the gzip process
-        gzip_proc = subprocess.Popen(["gzip"], stdin=dump_proc.stdout, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        dump_proc.stdout.close()  # Allow dump_proc to receive a SIGPIPE if gzip_proc exits
-
-        # Initialize Google Cloud Storage client
+        logging.info("Starting GCS upload process")
         client = storage.Client.from_service_account_json(KEY_FILE)
         bucket = client.bucket(BUCKET)
         blob = bucket.blob(gcs_path)
 
-        logging.info("Starting GCS upload process")
-        with io.BytesIO() as memfile:
-            for chunk in iter(lambda: gzip_proc.stdout.read(4096), b''):
-                memfile.write(chunk)
+        buffer = io.BytesIO()
 
-            memfile.seek(0)
+        with gzip.GzipFile(fileobj=buffer, mode='wb') as gz_out:
+            while True:
+                chunk = dump_proc.stdout.read(1024)
+                if not chunk:
+                    break
+                gz_out.write(chunk)
 
-            # Ensure memfile is a file-like object
-            if isinstance(memfile, io.BytesIO):
-                blob.upload_from_file(memfile, content_type='application/gzip')
-            else:
-                logging.error("Invalid file object: {}".format(memfile))
-                return
+        # Ensure the buffer is closed before uploading
+        buffer.seek(0)
+
+        logging.info("Uploading to GCS...")
+        blob.upload_from_file(buffer, content_type='application/gzip')
 
         elapsed_time = time.time() - start_time
         logging.info("Dumped and streamed database {} to GCS successfully in {:.2f} seconds.".format(db, elapsed_time))
