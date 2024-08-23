@@ -1,14 +1,11 @@
-#!/usr/bin/python3.5
-
 import os
 import time
 import subprocess
 import datetime
 import logging
 import configparser
-from google.cloud import storage
 import io
-import gzip
+from google.cloud import storage
 
 # Backup and log path
 BUCKET = "ti-sql-02"
@@ -16,6 +13,8 @@ GCS_PATH = "Backups/Current/MYSQL"
 SSL_PATH = "/ssl-certs/"
 SERVERS_LIST = "/backup/configs/MYSQL_servers_list.conf"
 KEY_FILE = "/root/jsonfiles/ti-ca-infrastructure-d1696a20da16.json"
+
+# Define the path for the database credentials
 CREDENTIALS_PATH = "/backup/configs/db_credentials.conf"
 
 # Logging Configuration
@@ -44,15 +43,14 @@ def load_server_list(file_path):
 def get_database_list(host, use_ssl, server):
     """Retrieve the list of databases from the MySQL server."""
     try:
-        command = [
-            "mysql", "-u{}".format(DB_USR), "-p{}".format(DB_PWD), "-h", host,
-            "--default-auth=mysql_native_password",
-            "-B", "--silent", "-e", "SHOW DATABASES"
-
-        ]
-
-        if use_ssl:
-            command += [
+        if not use_ssl:
+            command = [
+                "mysql", "-u{}".format(DB_USR), "-p{}".format(DB_PWD), "-h", host,
+                "--default-auth=mysql_native_password",
+                "-B", "--silent", "-e", "SHOW DATABASES"
+            ]
+        else:
+            command = [
                 "mysql", "-u{}".format(DB_USR), "-p{}".format(DB_PWD), "-h", host,
                 "--ssl-ca=" + os.path.join(SSL_PATH, server, "server-ca.pem"),
                 "--ssl-cert=" + os.path.join(SSL_PATH, server, "client-cert.pem"),
@@ -76,6 +74,7 @@ def get_database_list(host, use_ssl, server):
         ))
         return []
 
+# Stream database to GCS
 def stream_database_to_gcs(dump_command, gcs_path, db):
     start_time = time.time()
 
@@ -85,24 +84,40 @@ def stream_database_to_gcs(dump_command, gcs_path, db):
         # Start the dump process
         dump_proc = subprocess.Popen(dump_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
-        logging.info("Starting GCS upload process")
+        logging.info("Starting gzip process")
+        # Start the gzip process
+        gzip_proc = subprocess.Popen(["gzip"], stdin=dump_proc.stdout, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        dump_proc.stdout.close()  # Allow dump_proc to receive a SIGPIPE if gzip_proc exits
+
+        # Initialize Google Cloud Storage client
         client = storage.Client.from_service_account_json(KEY_FILE)
         bucket = client.bucket(BUCKET)
         blob = bucket.blob(gcs_path)
 
-        buffer = io.BytesIO()
-        
-        with gzip.GzipFile(fileobj=buffer, mode='wb') as gz_out:
-            while True:
-                chunk = dump_proc.stdout.read(1024)
-                if not chunk:
-                    break
-                gz_out.write(chunk)
-        
-        # Upload the compressed file to GCS
-        buffer.seek(0)
-        logging.info("Uploading to GCS...")
-        blob.upload_from_file(buffer, content_type='application/gzip')
+        logging.info("Starting GCS upload process")
+        with io.BytesIO() as memfile:
+            for chunk in iter(lambda: gzip_proc.stdout.read(4096), b''):
+                memfile.write(chunk)
+
+            memfile.seek(0)
+
+            # Ensure memfile is a file-like object
+            if isinstance(memfile, io.BytesIO):
+                blob.upload_from_file(memfile, content_type='application/gzip')
+            else:
+                logging.error("Invalid file object: {}".format(memfile))
+                return
+
+        # Wait for processes to complete and check for errors
+        dump_output, dump_err = dump_proc.communicate()
+        gzip_output, gzip_err = gzip_proc.communicate()
+
+        if dump_proc.returncode != 0:
+            logging.error("mysqldump failed: {}".format(dump_err.decode() if dump_err else 'No error message'))
+            return
+        if gzip_proc.returncode != 0:
+            logging.error("gzip failed: {}".format(gzip_err.decode() if gzip_err else 'No error message'))
+            return
 
         elapsed_time = time.time() - start_time
         logging.info("Dumped and streamed database {} to GCS successfully in {:.2f} seconds.".format(db, elapsed_time))
@@ -145,7 +160,9 @@ def main():
                 logging.info("Backing up database: {}".format(db))
                 gcs_path = os.path.join(GCS_PATH, SERVER, "{}_{}.sql.gz".format(current_date, db))
                 dump_command = [
-                    "mysqldump", "-u{}".format(DB_USR), "-p{}".format(DB_PWD), "-h", HOST, db
+                    "mysqldump", "-u{}".format(DB_USR), "-p{}".format(DB_PWD), "-h", HOST, db,
+                    "--set-gtid-purged=OFF", "--single-transaction", "--quick",
+                    "--triggers", "--events", "--routines"
                 ]
                 if use_ssl:
                     dump_command += [
