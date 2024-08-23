@@ -4,7 +4,6 @@ import subprocess
 import datetime
 import logging
 import configparser
-import io
 from google.cloud import storage
 
 # Backup and log path
@@ -84,25 +83,31 @@ def stream_database_to_gcs(dump_command, gcs_path, db):
         # Start the dump process
         dump_proc = subprocess.Popen(dump_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
-        logging.info("Starting GCS upload process")
+        logging.info("Starting gzip process")
+        # Start the gzip process
+        gzip_proc = subprocess.Popen(["gzip"], stdin=dump_proc.stdout, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        dump_proc.stdout.close()  # Allow dump_proc to receive a SIGPIPE if gzip_proc exits
+
+        # Initialize Google Cloud Storage client
         client = storage.Client.from_service_account_json(KEY_FILE)
         bucket = client.bucket(BUCKET)
         blob = bucket.blob(gcs_path)
 
-        buffer = io.BytesIO()
+        logging.info("Starting GCS upload process")
+        # Stream the gzip output directly to the GCS blob
+        with gzip_proc.stdout as f:
+            blob.upload_from_file(f, content_type='application/gzip')
 
-        with gzip.GzipFile(fileobj=buffer, mode='wb') as gz_out:
-            while True:
-                chunk = dump_proc.stdout.read(1024)
-                if not chunk:
-                    break
-                gz_out.write(chunk)
+        # Wait for processes to complete and check for errors
+        dump_output, dump_err = dump_proc.communicate()
+        gzip_output, gzip_err = gzip_proc.communicate()
 
-        # Ensure the buffer is closed before uploading
-        buffer.seek(0)
-
-        logging.info("Uploading to GCS...")
-        blob.upload_from_file(buffer, content_type='application/gzip')
+        if dump_proc.returncode != 0:
+            logging.error("mysqldump failed: {}".format(dump_err.decode() if dump_err else 'No error message'))
+            return
+        if gzip_proc.returncode != 0:
+            logging.error("gzip failed: {}".format(gzip_err.decode() if gzip_err else 'No error message'))
+            return
 
         elapsed_time = time.time() - start_time
         logging.info("Dumped and streamed database {} to GCS successfully in {:.2f} seconds.".format(db, elapsed_time))
