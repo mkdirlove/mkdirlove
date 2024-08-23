@@ -4,6 +4,7 @@ import subprocess
 import datetime
 import logging
 import configparser
+import io
 from google.cloud import storage
 
 # Backup and log path
@@ -25,13 +26,9 @@ logging.basicConfig(filename=log_filename, level=logging.INFO, format='%(asctime
 
 # Load Database credentials
 config = configparser.ConfigParser()
-try:
-    config.read(CREDENTIALS_PATH)
-    DB_USR = config['credentials']['DB_USR']
-    DB_PWD = config['credentials']['DB_PWD']
-except Exception as e:
-    logging.error("Failed to load database credentials: {}".format(e))
-    raise
+config.read(CREDENTIALS_PATH)
+DB_USR = config['credentials']['DB_USR']
+DB_PWD = config['credentials']['DB_PWD']
 
 def load_server_list(file_path):
     """Load the server list from a given file."""
@@ -77,6 +74,7 @@ def get_database_list(host, use_ssl, server):
         ))
         return []
 
+# Stream database to GCS
 def stream_database_to_gcs(dump_command, gcs_path, db):
     start_time = time.time()
 
@@ -86,37 +84,30 @@ def stream_database_to_gcs(dump_command, gcs_path, db):
         # Start the dump process
         dump_proc = subprocess.Popen(dump_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
-        logging.info("Starting GCS upload process")
+        logging.info("Starting gzip process")
+        # Start the gzip process
+        gzip_proc = subprocess.Popen(["gzip"], stdin=dump_proc.stdout, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        dump_proc.stdout.close()  # Allow dump_proc to receive a SIGPIPE if gzip_proc exits
+
+        # Initialize Google Cloud Storage client
         client = storage.Client.from_service_account_json(KEY_FILE)
         bucket = client.bucket(BUCKET)
         blob = bucket.blob(gcs_path)
 
-        buffer = io.BytesIO()
-        
-        with gzip.GzipFile(fileobj=buffer, mode='wb') as gz_out:
-            while True:
-                chunk = dump_proc.stdout.read(1024)
-                if not chunk:
-                    break
-                gz_out.write(chunk)
+        logging.info("Starting GCS upload process")
+        with io.BytesIO() as memfile:
+            for chunk in iter(lambda: gzip_proc.stdout.read(4096), b''):
+                memfile.write(chunk)
 
-        dump_proc.stdout.close()
-        dump_output, dump_err = dump_proc.communicate()
-
-        if dump_proc.returncode != 0:
-            logging.error("mysqldump failed: {}".format(dump_err.decode() if dump_err else 'No error message'))
-            return
-        
-        # Upload the compressed file to GCS
-        buffer.seek(0)
-        blob.upload_from_file(buffer, content_type='application/gzip')
+            memfile.seek(0)
+            blob.upload_from_file(memfile, content_type='application/gzip')
 
         elapsed_time = time.time() - start_time
         logging.info("Dumped and streamed database {} to GCS successfully in {:.2f} seconds.".format(db, elapsed_time))
 
     except Exception as e:
         logging.error("Unexpected error streaming database {} to GCS: {}".format(db, e))
-        
+
 def main():
     """Main function to execute the backup process."""
     current_date = datetime.datetime.now().strftime("%Y-%m-%d")
@@ -165,8 +156,7 @@ def main():
                     ]
 
                 logging.info("Dump command: {}".format(" ".join(dump_command)))
-                if not stream_database_to_gcs(dump_command, gcs_path, db):
-                    logging.error("Failed to back up database: {}".format(db))
+                stream_database_to_gcs(dump_command, gcs_path, db)
 
         except Exception as e:
             logging.error("Error processing server {}: {}".format(SERVER, e))
