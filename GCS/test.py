@@ -72,62 +72,79 @@ def get_database_list(host, use_ssl, server):
             host, e, e.output.decode()
         ))
         return []
-        
-def stream_database_to_gcs(dump_command, gcs_path, db):
-    start_time = time.time()
 
+def start_dump_process(dump_command):
+    """Start the mysqldump process."""
     try:
         logging.info("Starting dump process: {}".format(" ".join(dump_command)))
+        return subprocess.Popen(dump_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, bufsize=1)
+    except Exception as e:
+        logging.error("Failed to start dump process: {}".format(e))
+        raise
 
-        # Start the dump process
-        dump_proc = subprocess.Popen(dump_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, bufsize=1)
-
-        logging.info("Starting GCS upload process")
-        client = storage.Client.from_service_account_json(KEY_FILE)
-        bucket = client.bucket(BUCKET)
-        blob = bucket.blob(gcs_path)
-
-        # Use io.BytesIO as a buffer to hold the compressed data
+def compress_data(dump_proc):
+    """Compress data from the dump process into a gzip-compressed buffer."""
+    try:
         buffer = io.BytesIO()
-
-        # Use gzip.GzipFile to compress data while reading from the dump process
         with gzip.GzipFile(fileobj=buffer, mode='wb') as gz_out:
             while True:
                 chunk = dump_proc.stdout.read(1024)
                 if not chunk:
                     break
                 gz_out.write(chunk)
-
-        # Ensure all data is written to the buffer
         gz_out.flush()
         buffer.seek(0)
+        return buffer
+    except Exception as e:
+        logging.error("Failed to compress data: {}".format(e))
+        raise
 
-        # Close dump process and check for errors
+def upload_to_gcs(buffer, gcs_path):
+    """Upload the gzip-compressed buffer to Google Cloud Storage."""
+    try:
+        client = storage.Client.from_service_account_json(KEY_FILE)
+        bucket = client.bucket(BUCKET)
+        blob = bucket.blob(gcs_path)
+        buffer.seek(0)  # Rewind buffer to the start
+        blob.upload_from_file(buffer, content_type='application/gzip')
+        logging.info("Uploaded to GCS: {}".format(gcs_path))
+    except Exception as e:
+        logging.error("Failed to upload to GCS: {}".format(e))
+        raise
+
+def handle_dump_process(dump_command, gcs_path, db):
+    """Handle the entire process of dumping, compressing, and uploading."""
+    start_time = time.time()
+    dump_proc = None
+    buffer = None
+
+    try:
+        dump_proc = start_dump_process(dump_command)
+        buffer = compress_data(dump_proc)
+        
+        # Ensure dump process is completed and check for errors
         dump_proc.stdout.close()
         dump_output, dump_err = dump_proc.communicate()
 
         if dump_proc.returncode != 0:
             logging.error("mysqldump failed: {}".format(dump_err.decode() if dump_err else 'No error message'))
             return
-
-        # Upload the compressed file to GCS
-        # Ensure the buffer is not closed and rewind it before upload
-        buffer.seek(0)
-        blob.upload_from_file(buffer, content_type='application/gzip')
+        
+        upload_to_gcs(buffer, gcs_path)
 
         elapsed_time = time.time() - start_time
         logging.info("Dumped and streamed database {} to GCS successfully in {:.2f} seconds.".format(db, elapsed_time))
 
-    except subprocess.CalledProcessError as e:
-        logging.error("mysqldump command failed: return code {}, output: {}, error: {}".format(
-            e.returncode, e.output.decode() if e.output else 'No output', e.stderr.decode() if e.stderr else 'No stderr'
-        ))
     except Exception as e:
-        logging.error("Unexpected error streaming database {} to GCS: {}".format(db, e))
+        logging.error("Unexpected error processing database {}: {}".format(db, e))
+    
     finally:
-        # Ensure buffer is closed properly
-        buffer.close()
-        
+        if buffer and not buffer.closed:
+            buffer.close()
+
+def stream_database_to_gcs(dump_command, gcs_path, db):
+    handle_dump_process(dump_command, gcs_path, db)
+
 def main():
     """Main function to execute the backup process."""
     current_date = datetime.datetime.now().strftime("%Y-%m-%d")
