@@ -99,6 +99,13 @@ def stream_database_to_gcs(dump_command, gcs_path, db):
                     break
                 gz_out.write(chunk)
 
+        dump_proc.stdout.close()
+        dump_output, dump_err = dump_proc.communicate()
+
+        if dump_proc.returncode != 0:
+            logging.error("mysqldump failed: {}".format(dump_err.decode() if dump_err else 'No error message'))
+            return
+            
         # Ensure the buffer is closed before uploading
         buffer.seek(0)
 
