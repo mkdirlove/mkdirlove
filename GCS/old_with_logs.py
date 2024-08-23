@@ -5,6 +5,7 @@ import datetime
 import logging
 import configparser
 import io
+import gzip
 from google.cloud import storage
 
 # Backup and log path
@@ -74,7 +75,6 @@ def get_database_list(host, use_ssl, server):
         ))
         return []
 
-# Stream database to GCS
 def stream_database_to_gcs(dump_command, gcs_path, db):
     start_time = time.time()
 
