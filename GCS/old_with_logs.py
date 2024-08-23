@@ -74,54 +74,58 @@ def get_database_list(host, use_ssl, server):
         ))
         return []
 
+def execute_subprocess(command):
+    """Execute a subprocess command and return the process."""
+    return subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+def upload_stream_to_gcs(stream, bucket_name, gcs_path):
+    """Upload a stream directly to Google Cloud Storage."""
+    client = storage.Client.from_service_account_json(KEY_FILE)
+    bucket = client.bucket(bucket_name)
+    blob = bucket.blob(gcs_path)
+
+    logging.info("Starting GCS upload process")
+    blob.upload_from_file(stream, content_type='application/gzip')
+
+def handle_errors(dump_proc, gzip_proc):
+    """Handle errors from subprocesses."""
+    dump_output, dump_err = dump_proc.communicate()
+    gzip_output, gzip_err = gzip_proc.communicate()
+
+    if dump_proc.returncode != 0:
+        logging.error("mysqldump failed: %s", dump_err.decode() if dump_err else 'No error message')
+        return False
+    if gzip_proc.returncode != 0:
+        logging.error("gzip failed: %s", gzip_err.decode() if gzip_err else 'No error message')
+        return False
+    return True
+
 def stream_database_to_gcs(dump_command, gcs_path, db):
     start_time = time.time()
 
     try:
-        logging.info("Starting dump process: {}".format(" ".join(dump_command)))
+        logging.info("Starting dump process: %s", " ".join(dump_command))
 
-        # Start the dump process
-        dump_proc = subprocess.Popen(dump_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-
+        # Start the dump and gzip processes
+        dump_proc = execute_subprocess(dump_command)
         logging.info("Starting gzip process")
-        # Start the gzip process
-        gzip_proc = subprocess.Popen(["gzip"], stdin=dump_proc.stdout, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        gzip_proc = execute_subprocess(["gzip"])
         dump_proc.stdout.close()  # Allow dump_proc to receive a SIGPIPE if gzip_proc exits
 
-        # Initialize Google Cloud Storage client
-        client = storage.Client.from_service_account_json(KEY_FILE)
-        bucket = client.bucket(BUCKET)
-        blob = bucket.blob(gcs_path)
+        # Upload the stream to GCS
+        logging.info("Uploading to GCS")
+        upload_stream_to_gcs(gzip_proc.stdout, BUCKET, gcs_path)
 
-        logging.info("Starting GCS upload process")
-        with io.BytesIO() as memfile:
-            # Read from gzip process and write to BytesIO
-            for chunk in iter(lambda: gzip_proc.stdout.read(4096), b''):
-                memfile.write(chunk)
-            
-            # Ensure the buffer is at the beginning before uploading
-            memfile.seek(0)
-            
-            # Upload the data to GCS
-            blob.upload_from_file(memfile, content_type='application/gzip')
-
-        # Wait for processes to complete and check for errors
-        dump_output, dump_err = dump_proc.communicate()
-        gzip_output, gzip_err = gzip_proc.communicate()
-
-        if dump_proc.returncode != 0:
-            logging.error("mysqldump failed: {}".format(dump_err.decode() if dump_err else 'No error message'))
-            return
-        if gzip_proc.returncode != 0:
-            logging.error("gzip failed: {}".format(gzip_err.decode() if gzip_err else 'No error message'))
+        # Handle errors from subprocesses
+        if not handle_errors(dump_proc, gzip_proc):
             return
 
         elapsed_time = time.time() - start_time
-        logging.info("Dumped and streamed database {} to GCS successfully in {:.2f} seconds.".format(db, elapsed_time))
+        logging.info("Dumped and streamed database %s to GCS successfully in %.2f seconds.", db, elapsed_time)
 
     except Exception as e:
-        logging.error("Unexpected error streaming database {} to GCS: {}".format(db, e))
-
+        logging.error("Unexpected error streaming database %s to GCS: %s", db, e)
+        
 def main():
     """Main function to execute the backup process."""
     current_date = datetime.datetime.now().strftime("%Y-%m-%d")
