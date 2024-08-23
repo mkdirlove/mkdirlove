@@ -76,31 +76,33 @@ def get_database_list(host, use_ssl, server):
         return []
 
 def stream_database_to_gcs(dump_command, gcs_path, db):
-    """Stream a database dump to Google Cloud Storage using gzip compression."""
-    
-    def execute_subprocess(command):
-        """Execute a subprocess command and return the process."""
-        return subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    """Stream database dump to Google Cloud Storage."""
+    start_time = time.time()
+    client = storage.Client.from_service_account_json(KEY_FILE)
+    bucket = client.bucket(BUCKET)
+    blob = bucket.blob(gcs_path)
 
-    def upload_stream_to_gcs(stream, bucket_name, gcs_path):
-        """Upload a stream to Google Cloud Storage using chunked upload."""
-        client = storage.Client.from_service_account_json(KEY_FILE)
-        bucket = client.bucket(bucket_name)
-        blob = bucket.blob(gcs_path)
+    try:
+        logging.info("Starting dump process: %s", " ".join(dump_command))
 
-        logging.info("Starting GCS upload process")
+        # Start the dump process
+        dump_proc = subprocess.Popen(dump_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        logging.info("Starting gzip process")
         
+        # Start the gzip process, piping the dump output to gzip
+        gzip_proc = subprocess.Popen(["gzip"], stdin=dump_proc.stdout, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        dump_proc.stdout.close()  # Allow dump_proc to receive a SIGPIPE if gzip_proc exits
+
         # Create a write stream directly to GCS
         with blob.open("wb") as gcs_stream:
             while True:
-                chunk = stream.read(CHUNK_SIZE)
+                chunk = gzip_proc.stdout.read(CHUNK_SIZE)
                 if not chunk:
                     break
                 gcs_stream.write(chunk)
                 logging.debug("Uploaded chunk of size %d bytes", len(chunk))
 
-    def handle_errors(dump_proc, gzip_proc):
-        """Handle errors from subprocesses."""
+        # Handle errors from subprocesses
         dump_output, dump_err = dump_proc.communicate()
         gzip_output, gzip_err = gzip_proc.communicate()
 
@@ -110,33 +112,15 @@ def stream_database_to_gcs(dump_command, gcs_path, db):
         if gzip_proc.returncode != 0:
             logging.error("gzip failed: %s", gzip_err.decode() if gzip_err else 'No error message')
             return False
-        return True
-
-    start_time = time.time()
-
-    try:
-        logging.info("Starting dump process: %s", " ".join(dump_command))
-
-        # Start the dump and gzip processes
-        dump_proc = execute_subprocess(dump_command)
-        logging.info("Starting gzip process")
-        gzip_proc = execute_subprocess(["gzip"])
-        dump_proc.stdout.close()  # Allow dump_proc to receive a SIGPIPE if gzip_proc exits
-
-        # Upload the stream to GCS
-        logging.info("Uploading to GCS")
-        upload_stream_to_gcs(gzip_proc.stdout, BUCKET, gcs_path)
-
-        # Handle errors from subprocesses
-        if not handle_errors(dump_proc, gzip_proc):
-            return
 
         elapsed_time = time.time() - start_time
         logging.info("Dumped and streamed database %s to GCS successfully in %.2f seconds.", db, elapsed_time)
+        return True
 
     except Exception as e:
         logging.error("Unexpected error streaming database %s to GCS: %s", db, e)
-
+        return False
+        
 def main():
     """Main function to execute the backup process."""
     current_date = datetime.datetime.now().strftime("%Y-%m-%d")
