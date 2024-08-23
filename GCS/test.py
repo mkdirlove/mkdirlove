@@ -138,7 +138,7 @@ def handle_dump_process(dump_command, gcs_path, db):
         logging.error("Unexpected error processing database {}: {}".format(db, e))
     
     finally:
-        if buffer and not buffer.closed:
+        if buffer:
             buffer.close()
 
 def stream_database_to_gcs(dump_command, gcs_path, db):
