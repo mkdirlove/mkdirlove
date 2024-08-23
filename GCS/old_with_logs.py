@@ -74,6 +74,7 @@ def get_database_list(host, use_ssl, server):
         ))
         return []
 
+# Stream database to GCS
 def stream_database_to_gcs(dump_command, gcs_path, db):
     start_time = time.time()
 
@@ -94,9 +95,18 @@ def stream_database_to_gcs(dump_command, gcs_path, db):
         blob = bucket.blob(gcs_path)
 
         logging.info("Starting GCS upload process")
-        # Stream the gzip output directly to the GCS blob
-        with gzip_proc.stdout as f:
-            blob.upload_from_file(f, content_type='application/gzip')
+        with io.BytesIO() as memfile:
+            for chunk in iter(lambda: gzip_proc.stdout.read(4096), b''):
+                memfile.write(chunk)
+
+            memfile.seek(0)
+
+            # Ensure memfile is a file-like object
+            if isinstance(memfile, io.BytesIO):
+                blob.upload_from_file(memfile, content_type='application/gzip')
+            else:
+                logging.error("Invalid file object: {}".format(memfile))
+                return
 
         # Wait for processes to complete and check for errors
         dump_output, dump_err = dump_proc.communicate()
@@ -114,7 +124,6 @@ def stream_database_to_gcs(dump_command, gcs_path, db):
 
     except Exception as e:
         logging.error("Unexpected error streaming database {} to GCS: {}".format(db, e))
-
 
 def main():
     """Main function to execute the backup process."""
@@ -151,9 +160,7 @@ def main():
                 logging.info("Backing up database: {}".format(db))
                 gcs_path = os.path.join(GCS_PATH, SERVER, "{}_{}.sql.gz".format(current_date, db))
                 dump_command = [
-                    "mysqldump", "-u{}".format(DB_USR), "-p{}".format(DB_PWD), "-h", HOST, db,
-                    "--set-gtid-purged=OFF", "--single-transaction", "--quick",
-                    "--triggers", "--events", "--routines"
+                    "mysqldump", "-u{}".format(DB_USR), "-p{}".format(DB_PWD), "-h", HOST, db
                 ]
                 if use_ssl:
                     dump_command += [
