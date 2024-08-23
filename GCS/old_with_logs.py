@@ -105,8 +105,10 @@ def stream_database_to_gcs(dump_command, gcs_path, db):
             logging.error("mysqldump failed: {}".format(dump_err.decode() if dump_err else 'No error message'))
             return
 
-        # Upload the compressed file to GCS
+        # Ensure the buffer is at the beginning before uploading
         buffer.seek(0)
+
+        # Upload the compressed file to GCS
         blob.upload_from_file(buffer, content_type='application/gzip')
 
         elapsed_time = time.time() - start_time
