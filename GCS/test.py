@@ -9,7 +9,6 @@ import configparser
 from google.cloud import storage
 import io
 import gzip
-from file_like import ensure_file_like
 
 # Backup and log path
 BUCKET = "ti-sql-02"
@@ -101,13 +100,16 @@ def compress_data(dump_proc):
 
 def upload_to_gcs(buffer, gcs_path):
     """Upload the gzip-compressed buffer to Google Cloud Storage."""
-    buffer = ensure_file_like(buffer)  # Ensure buffer is a file-like object
+    if not isinstance(buffer, io.BytesIO):
+        logging.error("Invalid file object: {}".format(type(buffer)))
+        raise TypeError("Expected an io.BytesIO object.")
+
     try:
         client = storage.Client.from_service_account_json(KEY_FILE)
         bucket = client.bucket(BUCKET)
         blob = bucket.blob(gcs_path)
         buffer.seek(0)  # Rewind buffer to the start
-        blob.upload_from_file(buffer, content_type='application/gzip')
+        blob.upload_from_string(buffer.getvalue(), content_type='application/gzip')
         logging.info("Uploaded to GCS: {}".format(gcs_path))
     except Exception as e:
         logging.error("Failed to upload to GCS: {}".format(e))
