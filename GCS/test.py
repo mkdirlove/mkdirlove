@@ -84,16 +84,15 @@ def start_dump_process(dump_command):
 
 def compress_data(dump_proc):
     """Compress data from the dump process into a gzip-compressed buffer."""
+    buffer = io.BytesIO()
     try:
-        buffer = io.BytesIO()
         with gzip.GzipFile(fileobj=buffer, mode='wb') as gz_out:
             while True:
                 chunk = dump_proc.stdout.read(1024)
                 if not chunk:
                     break
                 gz_out.write(chunk)
-        gz_out.flush()
-        buffer.seek(0)
+        buffer.seek(0)  # Rewind buffer to the start
         return buffer
     except Exception as e:
         logging.error("Failed to compress data: {}".format(e))
@@ -143,6 +142,7 @@ def handle_dump_process(dump_command, gcs_path, db):
             buffer.close()
 
 def stream_database_to_gcs(dump_command, gcs_path, db):
+    """Stream the database dump to GCS."""
     handle_dump_process(dump_command, gcs_path, db)
 
 def main():
