@@ -75,8 +75,7 @@ def get_database_list(host, use_ssl, server):
         
 def stream_database_to_gcs(dump_command, gcs_path, db):
     start_time = time.time()
-    buffer = io.BytesIO()
-    
+
     try:
         logging.info("Starting dump process: {}".format(" ".join(dump_command)))
 
@@ -87,6 +86,9 @@ def stream_database_to_gcs(dump_command, gcs_path, db):
         client = storage.Client.from_service_account_json(KEY_FILE)
         bucket = client.bucket(BUCKET)
         blob = bucket.blob(gcs_path)
+
+        # Use io.BytesIO as a buffer to hold the compressed data
+        buffer = io.BytesIO()
 
         # Use gzip.GzipFile to compress data while reading from the dump process
         with gzip.GzipFile(fileobj=buffer, mode='wb') as gz_out:
@@ -108,10 +110,9 @@ def stream_database_to_gcs(dump_command, gcs_path, db):
             logging.error("mysqldump failed: {}".format(dump_err.decode() if dump_err else 'No error message'))
             return
 
-        # Rewind buffer to start
-        buffer.seek(0)
-
         # Upload the compressed file to GCS
+        # Ensure the buffer is not closed and rewind it before upload
+        buffer.seek(0)
         blob.upload_from_file(buffer, content_type='application/gzip')
 
         elapsed_time = time.time() - start_time
@@ -124,9 +125,9 @@ def stream_database_to_gcs(dump_command, gcs_path, db):
     except Exception as e:
         logging.error("Unexpected error streaming database {} to GCS: {}".format(db, e))
     finally:
-        # Ensure buffer is properly managed
+        # Ensure buffer is closed properly
         buffer.close()
-
+        
 def main():
     """Main function to execute the backup process."""
     current_date = datetime.datetime.now().strftime("%Y-%m-%d")
