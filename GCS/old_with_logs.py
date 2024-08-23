@@ -74,7 +74,6 @@ def get_database_list(host, use_ssl, server):
         ))
         return []
 
-# Stream database to GCS
 def stream_database_to_gcs(dump_command, gcs_path, db):
     start_time = time.time()
 
@@ -95,18 +94,9 @@ def stream_database_to_gcs(dump_command, gcs_path, db):
         blob = bucket.blob(gcs_path)
 
         logging.info("Starting GCS upload process")
-        with io.BytesIO() as memfile:
-            for chunk in iter(lambda: gzip_proc.stdout.read(4096), b''):
-                memfile.write(chunk)
-
-            memfile.seek(0)
-
-            # Ensure memfile is a file-like object
-            if isinstance(memfile, io.BytesIO):
-                blob.upload_from_file(memfile, content_type='application/gzip')
-            else:
-                logging.error("Invalid file object: {}".format(memfile))
-                return
+        # Upload directly from the gzip_proc stdout stream
+        blob.upload_from_file(gzip_proc.stdout, content_type='application/gzip')
+        gzip_proc.stdout.close()
 
         # Wait for processes to complete and check for errors
         dump_output, dump_err = dump_proc.communicate()
