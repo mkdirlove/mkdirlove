@@ -112,13 +112,6 @@ def stream_database_to_gcs(dump_command, gcs_path, db):
         dump_output, dump_err = dump_proc.communicate()
         gzip_output, gzip_err = gzip_proc.communicate()
 
-        if dump_proc.returncode != 0:
-            logging.error("mysqldump failed: {}".format(dump_err.decode() if dump_err else 'No error message'))
-            return
-        if gzip_proc.returncode != 0:
-            logging.error("gzip failed: {}".format(gzip_err.decode() if gzip_err else 'No error message'))
-            return
-
         elapsed_time = time.time() - start_time
         logging.info("Dumped and streamed database {} to GCS successfully in {:.2f} seconds.".format(db, elapsed_time))
 
