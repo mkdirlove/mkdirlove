@@ -92,7 +92,7 @@ def compress_data(dump_proc):
                 if not chunk:
                     break
                 gz_out.write(chunk)
-        buffer.seek(0)  # Rewind buffer to the start
+        buffer.seek(0)  # Rewind buffers to the start
         return buffer
     except Exception as e:
         logging.error("Failed to compress data: {}".format(e))
