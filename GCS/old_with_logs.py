@@ -4,7 +4,6 @@ import subprocess
 import datetime
 import logging
 import configparser
-import io
 from google.cloud import storage
 
 # Backup and log path
@@ -26,9 +25,14 @@ logging.basicConfig(filename=log_filename, level=logging.INFO, format='%(asctime
 
 # Load Database credentials
 config = configparser.ConfigParser()
-config.read(CREDENTIALS_PATH)
-DB_USR = config['credentials']['DB_USR']
-DB_PWD = config['credentials']['DB_PWD']
+try:
+    config.read(CREDENTIALS_PATH)
+    DB_USR = config['credentials']['DB_USR']
+    DB_PWD = config['credentials']['DB_PWD']
+except Exception as e:
+    logging.error("Failed to load database credentials: {}".format(e))
+    raise
+
 CHUNK_SIZE = 1024 * 1024  # 1 MB chunks for better performance
 
 def load_server_list(file_path):
@@ -169,7 +173,8 @@ def main():
                     ]
 
                 logging.info("Dump command: {}".format(" ".join(dump_command)))
-                stream_database_to_gcs(dump_command, gcs_path, db)
+                if not stream_database_to_gcs(dump_command, gcs_path, db):
+                    logging.error("Failed to back up database: {}".format(db))
 
         except Exception as e:
             logging.error("Error processing server {}: {}".format(SERVER, e))
