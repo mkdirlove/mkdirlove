@@ -100,6 +100,10 @@ def compress_data(dump_proc):
 
 def upload_to_gcs(buffer, gcs_path):
     """Upload the gzip-compressed buffer to Google Cloud Storage."""
+    if not isinstance(buffer, io.BytesIO):
+        logging.error("Invalid file object: {}".format(type(buffer)))
+        raise TypeError("Expected an io.BytesIO object.")
+
     try:
         client = storage.Client.from_service_account_json(KEY_FILE)
         bucket = client.bucket(BUCKET)
